@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Test" />
-    <title>Calculator</title>
+    <title>ByteGraphy</title>
 
     <!-- ======= Normalize ======= -->
     <link
@@ -16,9 +16,6 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- ======= AOS animation ======= -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
     <!-- ======= Custom styles ======= -->
     <link rel="stylesheet" href="./style.css" />
 
@@ -28,1063 +25,873 @@
 
   <body class="body" id="body" style="overflow: unset">
     <main class="main">
-      <section class="section">
-        <div class="input__container">
-          <ul class="input__list list">
-            <li class="input__item">
-              <label class="input__label" for="input__storage">
-                <p class="input__name input__name--storage">
-                  Storage:
-                  <span
-                    class="input__value input__value--storage"
-                    id="input__valueStorage"
-                  ></span>
-                </p>
-              </label>
-              <div class="input__wrapper">
-                <div class="input__start"></div>
-                <input
-                  type="range"
-                  id="input__storage"
-                  class="input__input"
-                  name="storage"
-                  min="0"
-                  max="1000"
-                  step="1"
-                  value="50"
-                  oninput="input__valueStorage.innerText = this.value"
+      <header class="header">
+        <p class="title active">
+          Where are your users? Choose the number for every region.
+        </p>
+        <a class="next-link" href="" onclick="return false;">Next</a>
+      </header>
+      <section class="map">
+        <div class="man__box-background">
+          <img
+            class="man__background"
+            src="./Elements_Old/map.png"
+            alt="Earth map"
+          />
+          <div class="man__box north-america">
+            <p class="latency-time north-america">
+              <span class="latency-time__value north-america"></span>
+            </p>
+            <img
+              class="man__image man__image--big north-america active"
+              src="./Elements_Old/man_empty.png"
+              alt="Small empty men in lines"
+              height="50px"
+            />
+            <img
+              class="man_filled__image man_filled__image--big north-america"
+              src="./Elements_Old/man_filled.png"
+              alt="Small filled men in lines"
+              height="50px"
+            />
+            <img
+              class="man__image man__image--medium north-america active"
+              src="./Elements_Old/man_empty.png"
+              alt="Small empty men in lines"
+              height="40px"
+            />
+            <img
+              class="man_filled__image man_filled__image--medium north-america"
+              src="./Elements_Old/man_filled.png"
+              alt="Small filled men in lines"
+              height="40px"
+            />
+            <img
+              class="man__image man__image--small north-america active"
+              src="./Elements_Old/man_empty.png"
+              alt="Small empty men in lines"
+              height="30px"
+            />
+            <img
+              class="man_filled__image man_filled__image--small north-america"
+              src="./Elements_Old/man_filled.png"
+              alt="Small filled men in lines"
+              height="30px"
+            />
+            <ul class="device__list list north-america">
+              <li>
+                <img
+                  class="device__image device__image--large north-america"
+                  src="./Elements_Old/large.png"
+                  alt="Mobile phone"
+                  width="30px"
+                  height="30px"
                 />
-                <div class="input__end"></div>
-              </div>
-              <div class="input__minmax">
-                <p class="input__min-range">0</p>
-                <p class="input__max-range">1000</p>
-              </div>
-            </li>
-            <li class="input__item">
-              <label class="input__label" for="input__transfer">
-                <p class="input__name input__name--transfer">
-                  Transfer:
-                  <span
-                    class="input__value input__value--transfer"
-                    id="input__valueTransfer"
-                  ></span>
-                </p>
-              </label>
-              <div class="input__wrapper">
-                <div class="input__start"></div>
-                <input
-                  type="range"
-                  id="input__transfer"
-                  class="input__input"
-                  name="transfer"
-                  min="0"
-                  max="1000"
-                  step="1"
-                  value="50"
-                  oninput="input__valueTransfer.innerText = this.value"
+                <img
+                  class="device-display__image device-display__image--large north-america"
+                  src="./Elements_Old/large_mask.png"
+                  alt="Mobile phone mask"
+                  style="width: 10px; height: 30px"
                 />
-                <div class="input__end"></div>
-              </div>
-              <div class="input__minmax">
-                <p class="input__min-range">0</p>
-                <p class="input__max-range">1000</p>
-              </div>
-            </li>
-          </ul>
+              </li>
+              <li>
+                <img
+                  class="device__image device__image--medium north-america"
+                  src="./Elements_Old/medium.png"
+                  alt="Tablet"
+                  width="30px"
+                  height="30px"
+                />
+                <img
+                  class="device-display__image device-display__image--medium north-america"
+                  src="./Elements_Old/medium_mask.png"
+                  alt="Tablet mask"
+                  style="width: 16px; height: 30px"
+                />
+              </li>
+              <li>
+                <img
+                  class="device__image device__image--small north-america"
+                  src="./Elements_Old/small.png"
+                  alt="PC"
+                  width="30px"
+                  height="30px"
+                />
+                <img
+                  class="device-display__image device-display__image--small north-america"
+                  src="./Elements_Old/small_mask.png"
+                  alt="PC mask"
+                  style="width: 24px; height: 30px"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="man__box south-america">
+            <p class="latency-time south-america">
+              <span class="latency-time__value south-america"></span>
+            </p>
+            <img
+              class="man__image man__image--big south-america active"
+              src="./Elements_Old/man_empty.png"
+              alt="Small empty men in lines"
+              height="50px"
+            />
+            <img
+              class="man_filled__image man_filled__image--big south-america"
+              src="./Elements_Old/man_filled.png"
+              alt="Small filled men in lines"
+              height="50px"
+            />
+            <img
+              class="man__image man__image--medium south-america active"
+              src="./Elements_Old/man_empty.png"
+              alt="Small empty men in lines"
+              height="40px"
+            />
+            <img
+              class="man_filled__image man_filled__image--medium south-america"
+              src="./Elements_Old/man_filled.png"
+              alt="Small filled men in lines"
+              height="40px"
+            />
+            <img
+              class="man__image man__image--small south-america active"
+              src="./Elements_Old/man_empty.png"
+              alt="Small empty men in lines"
+              height="30px"
+            />
+            <img
+              class="man_filled__image man_filled__image--small south-america"
+              src="./Elements_Old/man_filled.png"
+              alt="Small filled men in lines"
+              height="30px"
+            />
+            <ul class="device__list list south-america">
+              <li>
+                <img
+                  class="device__image device__image--large south-america"
+                  src="./Elements_Old/large.png"
+                  alt="Mobile phone"
+                  width="30px"
+                  height="30px"
+                />
+                <img
+                  class="device-display__image device-display__image--large south-america"
+                  src="./Elements_Old/large_mask.png"
+                  alt="Mobile phone mask"
+                  style="width: 10px; height: 30px"
+                />
+              </li>
+              <li>
+                <img
+                  class="device__image device__image--medium south-america"
+                  src="./Elements_Old/medium.png"
+                  alt="Tablet"
+                  width="30px"
+                  height="30px"
+                />
+                <img
+                  class="device-display__image device-display__image--medium south-america"
+                  src="./Elements_Old/medium_mask.png"
+                  alt="Tablet mask"
+                  style="width: 16px; height: 30px"
+                />
+              </li>
+              <li>
+                <img
+                  class="device__image device__image--small south-america"
+                  src="./Elements_Old/small.png"
+                  alt="PC"
+                  width="30px"
+                  height="30px"
+                />
+                <img
+                  class="device-display__image device-display__image--small south-america"
+                  src="./Elements_Old/small_mask.png"
+                  alt="PC mask"
+                  style="width: 24px; height: 30px"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="man__box europe">
+            <p class="latency-time europe">
+              <span class="latency-time__value europe"></span>
+            </p>
+            <img
+              class="man__image man__image--big europe active"
+              src="./Elements_Old/man_empty.png"
+              alt="Small empty men in lines"
+              height="50px"
+            />
+            <img
+              class="man_filled__image man_filled__image--big europe"
+              src="./Elements_Old/man_filled.png"
+              alt="Small filled men in lines"
+              height="50px"
+            />
+            <img
+              class="man__image man__image--medium europe active"
+              src="./Elements_Old/man_empty.png"
+              alt="Small empty men in lines"
+              height="40px"
+            />
+            <img
+              class="man_filled__image man_filled__image--medium europe"
+              src="./Elements_Old/man_filled.png"
+              alt="Small filled men in lines"
+              height="40px"
+            />
+            <img
+              class="man__image man__image--small europe active"
+              src="./Elements_Old/man_empty.png"
+              alt="Small empty men in lines"
+              height="30px"
+            />
+            <img
+              class="man_filled__image man_filled__image--small europe"
+              src="./Elements_Old/man_filled.png"
+              alt="Small filled men in lines"
+              height="30px"
+            />
+            <ul class="device__list list europe">
+              <li>
+                <img
+                  class="device__image device__image--large europe"
+                  src="./Elements_Old/large.png"
+                  alt="Mobile phone"
+                  width="30px"
+                  height="30px"
+                />
+                <img
+                  class="device-display__image device-display__image--large europe"
+                  src="./Elements_Old/large_mask.png"
+                  alt="Mobile phone mask"
+                  style="width: 10px; height: 30px"
+                />
+              </li>
+              <li>
+                <img
+                  class="device__image device__image--medium europe"
+                  src="./Elements_Old/medium.png"
+                  alt="Tablet"
+                  width="30px"
+                  height="30px"
+                />
+                <img
+                  class="device-display__image device-display__image--medium europe"
+                  src="./Elements_Old/medium_mask.png"
+                  alt="Tablet mask"
+                  style="width: 16px; height: 30px"
+                />
+              </li>
+              <li>
+                <img
+                  class="device__image device__image--small europe"
+                  src="./Elements_Old/small.png"
+                  alt="PC"
+                  width="30px"
+                  height="30px"
+                />
+                <img
+                  class="device-display__image device-display__image--small europe"
+                  src="./Elements_Old/small_mask.png"
+                  alt="PC mask"
+                  style="width: 24px; height: 30px"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="man__box oceania">
+            <p class="latency-time oceania">
+              <span class="latency-time__value oceania"></span>
+            </p>
+            <img
+              class="man__image man__image--big oceania active"
+              src="./Elements_Old/man_empty.png"
+              alt="Small empty men in lines"
+              height="50px"
+            />
+            <img
+              class="man_filled__image man_filled__image--big oceania"
+              src="./Elements_Old/man_filled.png"
+              alt="Small filled men in lines"
+              height="50px"
+            />
+            <img
+              class="man__image man__image--medium oceania active"
+              src="./Elements_Old/man_empty.png"
+              alt="Small empty men in lines"
+              height="40px"
+            />
+            <img
+              class="man_filled__image man_filled__image--medium oceania"
+              src="./Elements_Old/man_filled.png"
+              alt="Small filled men in lines"
+              height="40px"
+            />
+            <img
+              class="man__image man__image--small oceania active"
+              src="./Elements_Old/man_empty.png"
+              alt="Small empty men in lines"
+              height="30px"
+            />
+            <img
+              class="man_filled__image man_filled__image--small oceania"
+              src="./Elements_Old/man_filled.png"
+              alt="Small filled men in lines"
+              height="30px"
+            />
+            <ul class="device__list list oceania">
+              <li>
+                <img
+                  class="device__image device__image--large oceania"
+                  src="./Elements_Old/large.png"
+                  alt="Mobile phone"
+                  width="30px"
+                  height="30px"
+                />
+                <img
+                  class="device-display__image device-display__image--large oceania"
+                  src="./Elements_Old/large_mask.png"
+                  alt="Mobile phone mask"
+                  style="width: 10px; height: 30px"
+                />
+              </li>
+              <li>
+                <img
+                  class="device__image device__image--medium oceania"
+                  src="./Elements_Old/medium.png"
+                  alt="Tablet"
+                  width="30px"
+                  height="30px"
+                />
+                <img
+                  class="device-display__image device-display__image--medium oceania"
+                  src="./Elements_Old/medium_mask.png"
+                  alt="Tablet mask"
+                  style="width: 16px; height: 30px"
+                />
+              </li>
+              <li>
+                <img
+                  class="device__image device__image--small oceania"
+                  src="./Elements_Old/small.png"
+                  alt="PC"
+                  width="30px"
+                  height="30px"
+                />
+                <img
+                  class="device-display__image device-display__image--small oceania"
+                  src="./Elements_Old/small_mask.png"
+                  alt="PC mask"
+                  style="width: 24px; height: 30px"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="man__box asia">
+            <p class="latency-time asia">
+              <span class="latency-time__value asia"></span>
+            </p>
+            <img
+              class="man__image man__image--big asia active"
+              src="./Elements_Old/man_empty.png"
+              alt="Small empty men in lines"
+              height="50px"
+            />
+            <img
+              class="man_filled__image man_filled__image--big asia"
+              src="./Elements_Old/man_filled.png"
+              alt="Small filled men in lines"
+              height="50px"
+            />
+            <img
+              class="man__image man__image--medium asia active"
+              src="./Elements_Old/man_empty.png"
+              alt="Small empty men in lines"
+              height="40px"
+            />
+            <img
+              class="man_filled__image man_filled__image--medium asia"
+              src="./Elements_Old/man_filled.png"
+              alt="Small filled men in lines"
+              height="40px"
+            />
+            <img
+              class="man__image man__image--small asia active"
+              src="./Elements_Old/man_empty.png"
+              alt="Small empty men in lines"
+              height="30px"
+            />
+            <img
+              class="man_filled__image man_filled__image--small asia"
+              src="./Elements_Old/man_filled.png"
+              alt="Small filled men in lines"
+              height="30px"
+            />
+            <ul class="device__list list asia">
+              <li>
+                <img
+                  class="device__image device__image--large asia"
+                  src="./Elements_Old/large.png"
+                  alt="Mobile phone"
+                  width="30px"
+                  height="30px"
+                />
+                <img
+                  class="device-display__image device-display__image--large asia"
+                  src="./Elements_Old/large_mask.png"
+                  alt="Mobile phone mask"
+                  style="width: 10px; height: 30px"
+                />
+              </li>
+              <li>
+                <img
+                  class="device__image device__image--medium asia"
+                  src="./Elements_Old/medium.png"
+                  alt="Tablet"
+                  width="30px"
+                  height="30px"
+                />
+                <img
+                  class="device-display__image device-display__image--medium asia"
+                  src="./Elements_Old/medium_mask.png"
+                  alt="Tablet mask"
+                  style="width: 16px; height: 30px"
+                />
+              </li>
+              <li>
+                <img
+                  class="device__image device__image--small asia"
+                  src="./Elements_Old/small.png"
+                  alt="PC"
+                  width="30px"
+                  height="30px"
+                />
+                <img
+                  class="device-display__image device-display__image--small asia"
+                  src="./Elements_Old/small_mask.png"
+                  alt="PC mask"
+                  style="width: 24px; height: 30px"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="server-boxes">
+            <div class="server-point-block east-usa">
+              <img
+                class="circle__image--empty east-usa"
+                src="./Elements_Old/circle_empty.png"
+                alt="Circle filled"
+                height="30px"
+                width="30px"
+              />
+              <img
+                class="circle__image--filled east-usa"
+                src="./Elements_Old/circle_filled.png"
+                alt="Circle filled"
+                height="30px"
+                width="30px"
+              />
+              <img
+                class="east-usa server__image"
+                src="./Elements_Old/server.png"
+                alt="Circle filled"
+                height="40px"
+              />
+            </div>
+            <div class="server-point-block west-usa">
+              <img
+                class="circle__image--empty west-usa"
+                src="./Elements_Old/circle_empty.png"
+                alt="Circle filled"
+                height="30px"
+                width="30px"
+              />
+              <img
+                class="circle__image--filled west-usa"
+                src="./Elements_Old/circle_filled.png"
+                alt="Circle filled"
+                height="30px"
+                width="30px"
+              />
+              <img
+                class="west-usa server__image"
+                src="./Elements_Old/server.png"
+                alt="Circle filled"
+                height="40px"
+              />
+            </div>
+            <div class="server-point-block singapore">
+              <img
+                class="circle__image--empty singapore"
+                src="./Elements_Old/circle_empty.png"
+                alt="Circle filled"
+                height="30px"
+                width="30px"
+              />
+              <img
+                class="circle__image--filled singapore"
+                src="./Elements_Old/circle_filled.png"
+                alt="Circle filled"
+                height="30px"
+                width="30px"
+              />
+              <img
+                class="singapore server__image"
+                src="./Elements_Old/server.png"
+                alt="Circle filled"
+                height="40px"
+              />
+            </div>
+            <div class="server-point-block germany">
+              <img
+                class="circle__image--empty germany"
+                src="./Elements_Old/circle_empty.png"
+                alt="Circle filled"
+                height="30px"
+                width="30px"
+              />
+              <img
+                class="circle__image--filled germany"
+                src="./Elements_Old/circle_filled.png"
+                alt="Circle filled"
+                height="30px"
+                width="30px"
+              />
+              <img
+                class="germany server__image"
+                src="./Elements_Old/server.png"
+                alt="Circle filled"
+                height="40px"
+              />
+            </div>
+          </div>
+          <div class="arrows-boxes">
+            <div class="arrow-box east-usa">
+              <img
+                class="arrow east-usa_asia_large"
+                src="./Elements_Old/arc_east-usa_asia_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow east-usa_asia_medium"
+                src="./Elements_Old/arc_east-usa_asia_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow east-usa_asia_small"
+                src="./Elements_Old/arc_east-usa_asia_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow east-usa_europe_large"
+                src="./Elements_Old/arc_east-usa_europe_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow east-usa_europe_medium"
+                src="./Elements_Old/arc_east-usa_europe_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow east-usa_europe_small"
+                src="./Elements_Old/arc_east-usa_europe_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow east-usa_north-america_large"
+                src="./Elements_Old/arc_east-usa_north-america_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow east-usa_north-america_medium"
+                src="./Elements_Old/arc_east-usa_north-america_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow east-usa_north-america_small"
+                src="./Elements_Old/arc_east-usa_north-america_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow east-usa_oceania_large"
+                src="./Elements_Old/arc_east-usa_oceania_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow east-usa_oceania_medium"
+                src="./Elements_Old/arc_east-usa_oceania_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow east-usa_oceania_small"
+                src="./Elements_Old/arc_east-usa_oceania_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow east-usa_south-america_large"
+                src="./Elements_Old/arc_east-usa_south-america_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow east-usa_south-america_medium"
+                src="./Elements_Old/arc_east-usa_south-america_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow east-usa_south-america_small"
+                src="./Elements_Old/arc_east-usa_south-america_small.png"
+                alt="Arrow"
+              />
+            </div>
+            <div class="arrow-box west-usa">
+              <img
+                class="arrow west-usa_asia_large"
+                src="./Elements_Old/arc_west-usa_asia_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow west-usa_asia_medium"
+                src="./Elements_Old/arc_west-usa_asia_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow west-usa_asia_small"
+                src="./Elements_Old/arc_west-usa_asia_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow west-usa_europe_large"
+                src="./Elements_Old/arc_west-usa_europe_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow west-usa_europe_medium"
+                src="./Elements_Old/arc_west-usa_europe_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow west-usa_europe_small"
+                src="./Elements_Old/arc_west-usa_europe_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow west-usa_north-america_large"
+                src="./Elements_Old/arc_west-usa_north-america_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow west-usa_north-america_medium"
+                src="./Elements_Old/arc_west-usa_north-america_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow west-usa_north-america_small"
+                src="./Elements_Old/arc_west-usa_north-america_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow west-usa_oceania_large"
+                src="./Elements_Old/arc_west-usa_oceania_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow west-usa_oceania_medium"
+                src="./Elements_Old/arc_west-usa_oceania_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow west-usa_oceania_small"
+                src="./Elements_Old/arc_west-usa_oceania_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow west-usa_south-america_large"
+                src="./Elements_Old/arc_west-usa_south-america_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow west-usa_south-america_medium"
+                src="./Elements_Old/arc_west-usa_south-america_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow west-usa_south-america_small"
+                src="./Elements_Old/arc_west-usa_south-america_small.png"
+                alt="Arrow"
+              />
+            </div>
+            <div class="arrow-box singapore">
+              <img
+                class="arrow singapore_asia_large"
+                src="./Elements_Old/arc_singapore_asia_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow singapore_asia_medium"
+                src="./Elements_Old/arc_singapore_asia_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow singapore_asia_small"
+                src="./Elements_Old/arc_singapore_asia_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow singapore_europe_large"
+                src="./Elements_Old/arc_singapore_europe_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow singapore_europe_medium"
+                src="./Elements_Old/arc_singapore_europe_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow singapore_europe_small"
+                src="./Elements_Old/arc_singapore_europe_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow singapore_north-america_large"
+                src="./Elements_Old/arc_singapore_north-america_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow singapore_north-america_medium"
+                src="./Elements_Old/arc_singapore_north-america_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow singapore_north-america_small"
+                src="./Elements_Old/arc_singapore_north-america_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow singapore_oceania_large"
+                src="./Elements_Old/arc_singapore_oceania_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow singapore_oceania_medium"
+                src="./Elements_Old/arc_singapore_oceania_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow singapore_oceania_small"
+                src="./Elements_Old/arc_singapore_oceania_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow singapore_south-america_large"
+                src="./Elements_Old/arc_singapore_south-america_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow singapore_south-america_medium"
+                src="./Elements_Old/arc_singapore_south-america_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow singapore_south-america_small"
+                src="./Elements_Old/arc_singapore_south-america_small.png"
+                alt="Arrow"
+              />
+            </div>
+            <div class="arrow-box germany">
+              <img
+                class="arrow germany_asia_large"
+                src="./Elements_Old/arc_germany_asia_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow germany_asia_medium"
+                src="./Elements_Old/arc_germany_asia_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow germany_asia_small"
+                src="./Elements_Old/arc_germany_asia_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow germany_europe_large"
+                src="./Elements_Old/arc_germany_europe_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow germany_europe_medium"
+                src="./Elements_Old/arc_germany_europe_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow germany_europe_small"
+                src="./Elements_Old/arc_germany_europe_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow germany_north-america_large"
+                src="./Elements_Old/arc_germany_north-america_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow germany_north-america_medium"
+                src="./Elements_Old/arc_germany_north-america_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow germany_north-america_small"
+                src="./Elements_Old/arc_germany_north-america_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow germany_oceania_large"
+                src="./Elements_Old/arc_germany_oceania_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow germany_oceania_medium"
+                src="./Elements_Old/arc_germany_oceania_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow germany_oceania_small"
+                src="./Elements_Old/arc_germany_oceania_small.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow germany_south-america_large"
+                src="./Elements_Old/arc_germany_south-america_large.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow germany_south-america_medium"
+                src="./Elements_Old/arc_germany_south-america_medium.png"
+                alt="Arrow"
+              />
+              <img
+                class="arrow germany_south-america_small"
+                src="./Elements_Old/arc_germany_south-america_small.png"
+                alt="Arrow"
+              />
+            </div>
+          </div>
         </div>
-        <div class="answer__container">
-          <ul class="answer__list service list">
-            <li class="answer__service-item">
-              <div class="answer__service">
-                <p class="answer__service-name">Backblaze</p>
-                <svg
-                  class="answer__icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 50 50"
-                >
-                  <g style="stroke-width: 1.09827">
-                    <path
-                      d="M100.548 122.233c-4.49-.521-8.42-2.278-11.188-4.997-2.919-2.87-4.997-7.796-4.997-11.848 0-1.825.288-2.97.748-2.97.11 0 .73.49 1.38 1.09 2.136 1.97 6.568 3.655 9.653 3.669 1.553.007 2.147.557 2.768 2.57.645 2.088 1.215 3.056 2.566 4.362 2.668 2.576 6.767 3.477 10.532 2.314 3.005-.928 3.378-.091.98 2.196-3.149 3.004-7.305 4.211-12.442 3.614zm5.626-7.863c-2.678-1.256-4.348-3.751-4.348-6.493 0-1.33.179-1.942 1.124-3.842 1.077-2.165 1.124-2.363 1.116-4.65-.007-2.011-.151-2.81-.91-5.036-.736-2.161-.904-3.058-.917-4.895-.015-2.006.076-2.445.842-4.062 1.342-2.834 4.958-7.065 5.665-6.628.31.191.226.821-.428 3.25-.321 1.19-.429 2.406-.365 4.11.129 3.441.637 4.312 4.558 7.813 5.093 4.547 5.823 5.92 5.84 11 .01 3.071-.019 3.242-.857 4.945-1.008 2.047-1.914 2.896-4.28 4.006-2.234 1.05-5.373 1.264-7.04.482zm-13.08-9.95c-6.177-1.72-8.876-7.524-6.519-14.017.954-2.626 1.916-4.04 4.826-7.086 3.08-3.227 4.197-5.154 4.566-7.886.268-1.988.036-4.363-.62-6.338-.337-1.016-.38-1.46-.164-1.677.408-.408 3.074 2.368 4.773 4.97 1.798 2.756 2.461 4.597 2.478 6.882.013 1.632-.137 2.213-1.26 4.894-1.717 4.105-1.843 5.653-.72 8.899 1.728 4.993 1.588 8.676-.397 10.473-1.354 1.225-4.37 1.61-6.963.887z"
-                      style="fill: #f4cfd3; stroke-width: 1.09827"
-                      transform="matrix(.91205 0 0 .909 -67.443 -61.245)"
-                    />
-                    <path
-                      d="M99.101 121.842c-7.045-1.273-11.527-5.1-13.762-11.75-1.043-3.104-1.185-7.03-.266-7.337.165-.055.93.46 1.7 1.143 2.194 1.95 5.059 3.048 8.947 3.432 2.134.21 2.442.454 3.01 2.39 1.202 4.088 4.063 6.546 8.421 7.237 1.875.297 2.676.229 5.04-.432 2.704-.756 2.877-.162.605 2.079-3.128 3.084-8.076 4.254-13.695 3.238zm7.969-7.343c-2.357-.662-4.405-2.805-4.983-5.213-.411-1.715-.215-2.658 1.14-5.478 1.517-3.158 1.533-4.895.087-9.57-1.522-4.923-1.341-7.122.863-10.522 1.24-1.912 3.662-4.58 4.157-4.58.49 0 .471.295-.19 2.908-.757 2.994-.617 5.695.404 7.78.575 1.176 1.366 2.049 3.774 4.167 1.675 1.474 3.45 3.229 3.946 3.9 1.32 1.788 1.962 4.087 1.962 7.027 0 2.719-.415 4.442-1.442 5.995-1.815 2.743-6.53 4.483-9.718 3.586zm-12.906-9.99c-3.227-.557-6.034-2.554-7.348-5.228-.67-1.365-.732-1.742-.719-4.403.013-2.51.112-3.159.723-4.714.968-2.467 2.036-3.979 4.848-6.864 3.24-3.324 4.392-5.576 4.55-8.895.103-2.144-.024-3.003-.898-6.051-.288-1.004.508-.708 1.777.661 1.785 1.925 3.035 3.757 4.129 6.049.9 1.883.996 2.294.989 4.204-.007 1.897-.123 2.382-1.124 4.682-1.902 4.368-2.04 6.066-.758 9.27.385.963.841 2.661 1.014 3.774.863 5.55-1.888 8.428-7.183 7.514z"
-                      style="fill: #f0bcc2; stroke-width: 1.09827"
-                      transform="matrix(.91205 0 0 .909 -67.443 -61.245)"
-                    />
-                    <path
-                      d="M100.9 121.98c-4.98-.51-9.654-2.694-12.093-5.653-2.474-3-4.18-7.494-4.18-11.01 0-2.653.3-2.85 2.028-1.328 2.158 1.9 6.372 3.457 9.353 3.457 1.655 0 2.033.334 2.625 2.32 1 3.36 2.886 5.436 6.103 6.72 1.98.79 5.903.847 7.751.113 3.463-1.374 1.068 2.14-2.764 4.054-2.399 1.199-5.508 1.667-8.823 1.327zm5.291-7.874c-1.398-.665-2.99-2.257-3.599-3.596-.293-.647-.492-1.697-.496-2.617-.005-1.28.183-1.92 1.119-3.828 1.07-2.18 1.124-2.404 1.124-4.68 0-2.038-.15-2.869-1.022-5.638-1.314-4.17-1.282-5.655.182-8.618.98-1.98 4.674-6.334 5.059-5.96.094.092-.078 1.104-.381 2.25-.756 2.85-.754 5.835.004 7.858.444 1.184.955 1.89 2.2 3.042 7.214 6.669 7.67 7.416 7.7 12.613.015 2.775-.06 3.342-.591 4.498-1.397 3.039-4.4 4.919-8.123 5.086-1.675.074-2.338-.01-3.175-.41zm-13.664-10.184c-4.347-1.481-6.384-4.306-6.424-8.912-.038-4.276 1.765-7.933 5.936-12.038 2.524-2.484 3.85-4.85 4.232-7.55.25-1.765.01-4.416-.543-5.998-.162-.467-.25-1.062-.193-1.323.085-.392.28-.29 1.109.583 2.946 3.102 4.893 6.418 5.45 9.283.369 1.9.113 3.092-1.472 6.857-1.314 3.122-1.521 5.628-.645 7.805 1.7 4.223 1.873 7.887.47 9.96-1.334 1.972-4.489 2.503-7.92 1.333z"
-                      style="fill: #ea9da6; stroke-width: 1.09827"
-                      transform="matrix(.91205 0 0 .909 -67.443 -61.245)"
-                    />
-                    <path
-                      d="M99.619 121.738c-7.413-1.344-11.796-4.99-14.04-11.678-.8-2.382-1.128-5.334-.713-6.4l.29-.743 1.503 1.225c.826.673 1.95 1.452 2.495 1.73 1.36.694 4.5 1.506 6.66 1.722 1.395.14 1.879.303 2.182.736.215.306.39.704.39.884 0 .98 1.265 3.503 2.326 4.636 1.434 1.534 2.415 2.165 4.46 2.872 1.913.661 5.258.723 6.94.129 2.352-.832 2.512-.286.48 1.636-1.536 1.452-2.418 1.977-4.658 2.769-1.687.596-6.232.86-8.315.482zm7.234-7.54c-2.48-.802-4.415-3.194-4.683-5.79-.137-1.326-.045-1.664 1.138-4.179 1.22-2.595 1.285-2.846 1.259-4.853-.023-1.682-.234-2.742-1.026-5.16-1.39-4.245-1.405-6.065-.07-8.76 1.021-2.06 3.511-5.295 4.473-5.81.518-.277.556-.248.425.32-.936 4.052-1.028 4.729-.897 6.56.218 3.047.999 4.306 4.755 7.67 1.718 1.54 3.522 3.368 4.007 4.064 1.308 1.874 1.8 4.022 1.69 7.37-.08 2.473-.18 2.955-.888 4.338-.487.953-1.228 1.885-1.91 2.405-2.306 1.76-5.977 2.57-8.273 1.826zm-13.127-10.042c-4.617-1.046-7.202-3.96-7.46-8.41-.261-4.515 1.092-7.598 5.264-11.993 3.71-3.908 4.748-5.869 4.923-9.298.091-1.772-.005-2.807-.402-4.316-.286-1.091-.46-2.043-.388-2.116.211-.21 2.645 2.603 3.964 4.58 1.507 2.258 2.452 4.878 2.452 6.797 0 1.12-.274 2.125-1.194 4.365-.658 1.601-1.332 3.7-1.498 4.664-.295 1.704-.276 1.838.695 4.763 1.54 4.636 1.569 7.466.099 9.561-1.06 1.511-3.568 2.056-6.455 1.403z"
-                      style="fill: #e27885; stroke-width: 1.09827"
-                      transform="matrix(.91205 0 0 .909 -67.443 -61.245)"
-                    />
-                    <path
-                      d="M100.567 121.706c-4.193-.488-7.914-2.074-10.451-4.455-2.053-1.926-3.192-3.793-4.332-7.101-.725-2.102-.887-2.97-.89-4.755 0-1.408.101-2.183.288-2.183.16 0 .836.48 1.503 1.068.668.587 1.936 1.411 2.82 1.83 1.662.79 5.002 1.6 6.6 1.6 1.475 0 1.716.221 2.27 2.08.997 3.346 3.137 5.708 6.294 6.945 2.053.803 5.953.87 7.812.131.695-.275 1.333-.431 1.418-.346.276.276-.934 1.71-2.276 2.694-1.826 1.34-4.056 2.182-6.645 2.506-1.217.153-2.275.262-2.352.243a67.863 67.863 0 0 0-2.059-.257zm5.63-7.91c-2.424-1.248-3.842-3.418-3.842-5.88 0-1.195.215-1.925 1.124-3.818 1.067-2.22 1.125-2.463 1.124-4.722-.001-2.024-.155-2.868-1.023-5.629-.852-2.71-1.004-3.526-.914-4.93.147-2.315 1.515-5.017 3.762-7.433 1.863-2.003 2.006-1.943 1.35.572-.593 2.279-.517 5.563.17 7.422.455 1.226.94 1.874 2.434 3.251 3.95 3.64 5.915 5.734 6.474 6.896 1.364 2.841 1.458 7.587.202 10.156-1.36 2.777-4.125 4.42-7.692 4.568-1.73.071-2.309-.011-3.168-.454zM92.83 103.772c-2.191-.707-2.99-1.202-4.313-2.674-1.554-1.729-2.16-3.47-2.166-6.221-.007-4.044 1.718-7.657 5.302-11.1 3.61-3.47 4.913-6.135 4.91-10.052 0-1.407-.17-2.942-.409-3.719-.583-1.89-.536-1.946.666-.781 1.491 1.445 3.866 5.072 4.529 6.919.939 2.615.797 4.216-.698 7.884-1.683 4.128-1.882 6.162-.861 8.814 1.004 2.61 1.307 3.953 1.324 5.871.025 2.821-.898 4.552-2.811 5.275-1.116.422-3.829.314-5.473-.216z"
-                      style="fill: #dc5666; stroke-width: 1.09827"
-                      transform="matrix(.91205 0 0 .909 -67.443 -61.245)"
-                    />
-                    <path
-                      d="M99.577 121.47c-4.015-.716-7.76-2.542-9.985-4.869-2.405-2.513-4.271-6.795-4.567-10.478-.204-2.536.072-3.05 1.112-2.073 2.107 1.983 5.055 3.194 9.062 3.726l2.502.331.675 1.985c.85 2.5 1.608 3.725 3.027 4.887 3.015 2.471 7.62 3.285 11.218 1.982 1.245-.45 1.347-.126.3.954-1.234 1.272-3.018 2.382-4.899 3.046-1.785.63-6.256.9-8.445.509zm7.578-7.433a6.812 6.812 0 0 1-4.419-4.253c-.627-1.78-.475-2.767.87-5.629 1.177-2.504 1.25-2.788 1.232-4.78-.015-1.658-.221-2.745-.953-5.026-.513-1.6-1.01-3.446-1.104-4.101-.207-1.441.357-3.789 1.346-5.606.716-1.316 3.488-4.568 3.707-4.349.068.067-.081 1.038-.33 2.157-.966 4.34-.08 7.708 2.693 10.241 5.716 5.223 6.367 5.996 7.084 8.412.625 2.102.564 6.201-.118 8.024-1.027 2.745-4.104 4.788-7.627 5.064-.821.065-1.892-.005-2.38-.154zm-13.429-10.146c-3.098-.701-5.252-2.301-6.463-4.8-.994-2.05-1.054-5.43-.145-8.136.93-2.773 2.094-4.515 5.142-7.697 3.483-3.638 4.522-5.857 4.529-9.679.002-.946-.17-2.37-.38-3.163-.212-.793-.336-1.492-.276-1.552.151-.15 1.253 1.105 2.654 3.023 1.798 2.465 2.826 4.87 2.976 6.965.115 1.612.034 2.005-.86 4.141-1.225 2.924-1.988 5.5-1.988 6.71 0 .508.42 2.141.935 3.63 1.792 5.192 1.474 8.636-.945 10.22-.939.616-3.28.768-5.179.338z"
-                      style="fill: #d53349; stroke-width: 1.09827"
-                      transform="matrix(.91205 0 0 .909 -67.443 -61.245)"
-                    />
-                    <path
-                      d="M98.534 121.032c-6.52-1.398-10.4-4.853-12.579-11.205-.575-1.675-1.067-6.085-.679-6.085.107 0 .689.424 1.294.943 2.046 1.754 6.311 3.29 9.135 3.29 1.629 0 1.842.186 2.418 2.12 1.371 4.606 4.931 7.29 10.08 7.601 1.738.105 2.6.03 3.654-.32.76-.253 1.437-.402 1.507-.333.212.213-2.141 2.15-3.527 2.905-.717.39-2.005.892-2.861 1.115-1.955.51-5.99.494-8.442-.031zm8.217-7.345c-1.306-.486-2.993-2.096-3.628-3.463-.828-1.781-.664-3.34.62-5.923 1.1-2.207 1.125-2.322 1.125-4.915 0-2.347-.119-3.034-1.024-5.908-.82-2.608-1-3.537-.905-4.686.159-1.912 1.65-4.884 3.384-6.746 1.273-1.367 1.345-1.407 1.184-.662-.798 3.687-.748 5.768.199 8.3.405 1.083.958 1.822 2.281 3.047 7.057 6.536 7.52 7.283 7.55 12.201.02 3.344-.46 4.811-2.131 6.527-1.993 2.046-6.22 3.134-8.655 2.228zM93.425 103.61c-5.215-1.456-7.695-5.598-6.575-10.982.678-3.259 1.993-5.495 5.119-8.706 4.587-4.712 5.667-7.827 4.688-13.519l-.16-.926 1.082 1.164c2.355 2.535 4.034 6.186 4.035 8.775 0 1.127-.249 2.06-1.058 3.97-1.386 3.269-1.638 4.252-1.64 6.406 0 1.295.175 2.214.631 3.307.927 2.219 1.299 4.225 1.178 6.356-.113 2.011-.515 2.83-1.895 3.86-.918.686-3.5.827-5.405.295z"
-                      style="fill: #cf102a; stroke-width: 1.09827"
-                      transform="matrix(.91205 0 0 .909 -67.443 -61.245)"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </li>
-            <li class="answer__service-item">
-              <div class="answer__service">
-                <div class="answer__service-wrapper">
-                  <p class="answer__service-name">Bunny</p>
-                  <div class="answer__option--bunny">
-                    <input
-                      class="answer__input"
-                      type="radio"
-                      id="hdd"
-                      name="bunny"
-                      value="hdd"
-                      checked
-                    />
-                    <label class="answer__label" for="hdd">HDD</label>
-                    <input
-                      class="answer__input"
-                      type="radio"
-                      id="ssd"
-                      name="bunny"
-                      value="ssd"
-                    />
-                    <label class="answer__label" for="ssd">SSD</label>
-                  </div>
-                </div>
-                <svg
-                  class="answer__icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  version="1.1"
-                  viewBox="0 0 50 50"
-                >
-                  <defs id="defs2">
-                    <linearGradient
-                      id="linear-gradient"
-                      x1="131.15"
-                      x2="143.52"
-                      y1="25.3"
-                      y2="33.64"
-                      gradientTransform="matrix(.26458 0 0 .26458 -5.708 31.233)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop209" offset="0" stop-color="#febe2d" />
-                      <stop id="stop211" offset="1" stop-color="#f85e23" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_3"
-                      x1="16.85"
-                      x2="36.49"
-                      y1="6.11"
-                      y2="6.11"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop214" offset="0" stop-color="#fbaa19" />
-                      <stop id="stop216" offset="1" stop-color="#ef3e23" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_4"
-                      x1="15.77"
-                      x2="17.31"
-                      y1="31.08"
-                      y2="26.87"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop219" offset="0" stop-color="#f78d1e" />
-                      <stop id="stop221" offset="1" stop-color="#f37121" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_2"
-                      x1="3.56"
-                      x2="27.49"
-                      y1="32.53"
-                      y2="6.88"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop224" offset="0" stop-color="#febe2d" />
-                      <stop id="stop226" offset="1" stop-color="#f04e23" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_5"
-                      x1="20.47"
-                      x2="7.23"
-                      y1="17.54"
-                      y2="37.92"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop229" offset="0" stop-color="#ea4425" />
-                      <stop id="stop231" offset="1" stop-color="#fdbb27" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_6"
-                      x1=".24"
-                      x2="42.04"
-                      y1="10.57"
-                      y2="10.57"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop234" offset="0" stop-color="#f47920" />
-                      <stop id="stop236" offset="1" stop-color="#e93825" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_7"
-                      x1="-21.84"
-                      x2="63.21"
-                      y1="7.78"
-                      y2="7.78"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop239" offset="0" stop-color="#fdca0b" />
-                      <stop id="stop241" offset="1" stop-color="#f5841f" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_8"
-                      x1="8.54"
-                      x2="17.39"
-                      y1="18.07"
-                      y2="48.94"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop244" offset="0" stop-color="#e73c25" />
-                      <stop id="stop246" offset="1" stop-color="#faa21b" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_9"
-                      x1="-51.37"
-                      x2="74.88"
-                      y1="23.08"
-                      y2="23.08"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop249" offset="0" stop-color="#fdba12" />
-                      <stop id="stop251" offset="1" stop-color="#f7921e" />
-                    </linearGradient>
-                    <linearGradient
-                      xlink:href="#GradientFill_2"
-                      id="GradientFill_2-2"
-                      x1=".08"
-                      x2="4.81"
-                      y1="16.72"
-                      y2="17.56"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                    />
-                    <linearGradient
-                      xlink:href="#GradientFill_2"
-                      id="linearGradient287"
-                      x1="3.56"
-                      x2="27.49"
-                      y1="32.53"
-                      y2="6.88"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    />
-                    <style id="style207">
-                      .cls-1,
-                      .cls-2 {
-                        fill-rule: evenodd;
-                      }
-                      .cls-1 {
-                        fill: url(#linear-gradient);
-                      }
-                      .cls-2 {
-                        fill: #fff;
-                      }
-                    </style>
-                  </defs>
-                  <g id="layer1">
-                    <g
-                      id="g363"
-                      style="stroke-width: 0.224902"
-                      transform="matrix(4.46825 0 0 4.42464 242.964 -88.527)"
-                    >
-                      <path
-                        id="path277"
-                        d="M-53.218 23.934a.6.6 0 0 1 .598.6v.599h-.598a.598.598 0 0 1-.598-.598.6.6 0 0 1 .598-.6z"
-                        style="
-                          fill: url(#GradientFill_2-2);
-                          stroke-width: 0.059505;
-                          fill-rule: evenodd;
-                        "
-                      />
-                      <path
-                        id="path261"
-                        d="m-48.26 21.82 2.612 1.418-2.413-3.23a1.8 1.8 0 0 0-.199 1.812z"
-                        style="
-                          fill: url(#GradientFill_3);
-                          stroke-width: 0.059505;
-                          fill-rule: evenodd;
-                        "
-                      />
-                      <path
-                        id="path263"
-                        d="M-49.44 27.08a.595.595 0 1 1-.595.6.595.595 0 0 1 .595-.6z"
-                        style="
-                          fill: url(#GradientFill_4);
-                          stroke-width: 0.059505;
-                          fill-rule: evenodd;
-                        "
-                      />
-                      <path
-                        id="path265"
-                        d="m-51.258 20.481 7.313 3.97a.355.355 0 0 1 0 .637 5.686 5.686 0 0 1-1.79.698l-1.522 3.122s-.482 1.096-1.807.675c.555-.556 1.227-1.058 1.227-1.913a1.606 1.606 0 0 0-3.212 0c0 1.117 1.101 1.588 1.712 2.363a1.005 1.005 0 0 1-.087 1.267c-.76-.751-2.228-2.019-2.831-2.85a2.408 2.408 0 0 1-.516-1.468 2.765 2.765 0 0 1 1.953-2.503 3.188 3.188 0 0 1 1.026-.124 3.328 3.328 0 0 1 1.376.415c.648.381.963.28 1.41-.095.265-.217.553-.923.106-1.087a3.212 3.212 0 0 0-.447-.112c-.83-.161-2.283-.314-2.818-.619-.85-.468-1.42-1.434-1.093-2.376z"
-                        style="
-                          fill: url(#linearGradient287);
-                          stroke-width: 0.059505;
-                          fill-rule: evenodd;
-                        "
-                      />
-                      <path
-                        id="path267"
-                        d="M-47.85 27.773zm0-.095c.339-1.78-1.468-3.48-2.855-3.225l.093-.021q-.111.023-.214.055a2.765 2.765 0 0 0-1.953 2.503 2.408 2.408 0 0 0 .53 1.468c.602.831 2.07 2.099 2.83 2.85a1.005 1.005 0 0 0 .088-1.267c-.625-.773-1.726-1.246-1.726-2.36a1.606 1.606 0 0 1 3.213 0z"
-                        style="
-                          fill: url(#GradientFill_5);
-                          stroke-width: 0.059505;
-                          fill-rule: evenodd;
-                        "
-                      />
-                      <path
-                        id="path269"
-                        d="m-51.258 20.481 5.557 3.027.158.087c.133.104.265.31.093.691-.265.569-1.323 1.12-2.543.688.381.111.64-.016.974-.296.265-.217.553-.924.106-1.088a3.212 3.212 0 0 0-.447-.111c-.831-.161-2.284-.315-2.818-.62-.836-.47-1.408-1.436-1.08-2.378z"
-                        style="
-                          fill: url(#GradientFill_6);
-                          stroke-width: 0.059505;
-                          fill-rule: evenodd;
-                        "
-                      />
-                      <path
-                        id="path271"
-                        d="M-51.258 20.481c.575 2.117 4.07 2.292 5.821 3.175z"
-                        style="
-                          fill: url(#GradientFill_7);
-                          stroke-width: 0.059505;
-                          fill-rule: evenodd;
-                        "
-                      />
-                      <path
-                        id="path273"
-                        d="M-49.345 30.04c-.61-.772-1.712-1.245-1.712-2.36a1.606 1.606 0 0 1 1.408-1.587 2.323 2.323 0 0 0-2.315 2.315 2.26 2.26 0 0 0 .048.466c.505.571 1.235 1.246 1.852 1.818.24.224.463.436.645.616a1.106 1.106 0 0 0 .265-.627.968.968 0 0 0-.19-.64z"
-                        style="
-                          fill: url(#GradientFill_8);
-                          stroke-width: 0.059505;
-                          fill-rule: evenodd;
-                        "
-                      />
-                      <path
-                        id="path275"
-                        d="M-47.858 27.868a1.537 1.537 0 0 0 .014-.19c.333-1.78-1.474-3.48-2.86-3.225a3.305 3.305 0 0 1 .904-.09c1.818.074 2.326 2.016 1.942 3.505z"
-                        style="
-                          fill: url(#GradientFill_9);
-                          stroke-width: 0.059505;
-                          fill-rule: evenodd;
-                        "
-                      />
-                    </g>
-                  </g>
-                </svg>
-              </div>
-            </li>
-            <li class="answer__service-item">
-              <div class="answer__service">
-                <div class="answer__service-wrapper">
-                  <p class="answer__service-name">Scaleway</p>
-                  <div class="answer__option--scaleway">
-                    <input
-                      class="answer__input"
-                      type="radio"
-                      id="multi"
-                      name="scaleway"
-                      value="multi"
-                      checked
-                    />
-                    <label class="answer__label" for="multi">Multi</label>
-                    <input
-                      class="answer__input"
-                      type="radio"
-                      id="single"
-                      name="scaleway"
-                      value="single"
-                    />
-                    <label class="answer__label" for="single">Single</label>
-                  </div>
-                </div>
-                <svg
-                  class="answer__icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  id="svg8"
-                  version="1.1"
-                  viewBox="0 0 50 50"
-                >
-                  <defs id="defs2">
-                    <linearGradient
-                      id="linear-gradient"
-                      x1="131.15"
-                      x2="143.52"
-                      y1="25.3"
-                      y2="33.64"
-                      gradientTransform="matrix(.26458 0 0 .26458 -5.708 31.233)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop209" offset="0" stop-color="#febe2d" />
-                      <stop id="stop211" offset="1" stop-color="#f85e23" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_3"
-                      x1="16.85"
-                      x2="36.49"
-                      y1="6.11"
-                      y2="6.11"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop214" offset="0" stop-color="#fbaa19" />
-                      <stop id="stop216" offset="1" stop-color="#ef3e23" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_4"
-                      x1="15.77"
-                      x2="17.31"
-                      y1="31.08"
-                      y2="26.87"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop219" offset="0" stop-color="#f78d1e" />
-                      <stop id="stop221" offset="1" stop-color="#f37121" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_2"
-                      x1="3.56"
-                      x2="27.49"
-                      y1="32.53"
-                      y2="6.88"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop224" offset="0" stop-color="#febe2d" />
-                      <stop id="stop226" offset="1" stop-color="#f04e23" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_5"
-                      x1="20.47"
-                      x2="7.23"
-                      y1="17.54"
-                      y2="37.92"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop229" offset="0" stop-color="#ea4425" />
-                      <stop id="stop231" offset="1" stop-color="#fdbb27" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_6"
-                      x1=".24"
-                      x2="42.04"
-                      y1="10.57"
-                      y2="10.57"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop234" offset="0" stop-color="#f47920" />
-                      <stop id="stop236" offset="1" stop-color="#e93825" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_7"
-                      x1="-21.84"
-                      x2="63.21"
-                      y1="7.78"
-                      y2="7.78"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop239" offset="0" stop-color="#fdca0b" />
-                      <stop id="stop241" offset="1" stop-color="#f5841f" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_8"
-                      x1="8.54"
-                      x2="17.39"
-                      y1="18.07"
-                      y2="48.94"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop244" offset="0" stop-color="#e73c25" />
-                      <stop id="stop246" offset="1" stop-color="#faa21b" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_9"
-                      x1="-51.37"
-                      x2="74.88"
-                      y1="23.08"
-                      y2="23.08"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop249" offset="0" stop-color="#fdba12" />
-                      <stop id="stop251" offset="1" stop-color="#f7921e" />
-                    </linearGradient>
-                    <linearGradient
-                      xlink:href="#GradientFill_2"
-                      id="GradientFill_2-2"
-                      x1=".08"
-                      x2="4.81"
-                      y1="16.72"
-                      y2="17.56"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                    />
-                    <linearGradient
-                      id="GradientFill_3-2"
-                      x1="16.85"
-                      x2="36.49"
-                      y1="6.11"
-                      y2="6.11"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop214-7" offset="0" stop-color="#fbaa19" />
-                      <stop id="stop216-0" offset="1" stop-color="#ef3e23" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_4-7"
-                      x1="15.77"
-                      x2="17.31"
-                      y1="31.08"
-                      y2="26.87"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop219-4" offset="0" stop-color="#f78d1e" />
-                      <stop id="stop221-8" offset="1" stop-color="#f37121" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_5-9"
-                      x1="20.47"
-                      x2="7.23"
-                      y1="17.54"
-                      y2="37.92"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop229-8" offset="0" stop-color="#ea4425" />
-                      <stop id="stop231-5" offset="1" stop-color="#fdbb27" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_6-6"
-                      x1=".24"
-                      x2="42.04"
-                      y1="10.57"
-                      y2="10.57"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop234-9" offset="0" stop-color="#f47920" />
-                      <stop id="stop236-3" offset="1" stop-color="#e93825" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_7-5"
-                      x1="-21.84"
-                      x2="63.21"
-                      y1="7.78"
-                      y2="7.78"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop239-9" offset="0" stop-color="#fdca0b" />
-                      <stop id="stop241-5" offset="1" stop-color="#f5841f" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_8-1"
-                      x1="8.54"
-                      x2="17.39"
-                      y1="18.07"
-                      y2="48.94"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop244-6" offset="0" stop-color="#e73c25" />
-                      <stop id="stop246-7" offset="1" stop-color="#faa21b" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_9-2"
-                      x1="-51.37"
-                      x2="74.88"
-                      y1="23.08"
-                      y2="23.08"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop249-9" offset="0" stop-color="#fdba12" />
-                      <stop id="stop251-2" offset="1" stop-color="#f7921e" />
-                    </linearGradient>
-                    <linearGradient
-                      xlink:href="#GradientFill_2"
-                      id="GradientFill_2-2-6"
-                      x1=".08"
-                      x2="4.81"
-                      y1="16.72"
-                      y2="17.56"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                    />
-                    <style id="style207">
-                      .cls-1,
-                      .cls-10,
-                      .cls-11,
-                      .cls-2,
-                      .cls-3,
-                      .cls-4,
-                      .cls-5,
-                      .cls-6,
-                      .cls-7,
-                      .cls-8,
-                      .cls-9 {
-                        fill-rule: evenodd;
-                      }
-                      .cls-1 {
-                        fill: url(#linear-gradient);
-                      }
-                      .cls-2 {
-                        fill: #fff;
-                      }
-                      .cls-3 {
-                        fill: url(#GradientFill_3);
-                      }
-                      .cls-4 {
-                        fill: url(#GradientFill_4);
-                      }
-                      .cls-5 {
-                        fill: url(#GradientFill_2);
-                      }
-                      .cls-6 {
-                        fill: url(#GradientFill_5);
-                      }
-                      .cls-7 {
-                        fill: url(#GradientFill_6);
-                      }
-                      .cls-8 {
-                        fill: url(#GradientFill_7);
-                      }
-                      .cls-9 {
-                        fill: url(#GradientFill_8);
-                      }
-                      .cls-10 {
-                        fill: url(#GradientFill_9);
-                      }
-                      .cls-11 {
-                        fill: url(#GradientFill_2-2);
-                      }
-                    </style>
-                  </defs>
-                  <g id="layer1">
-                    <g
-                      id="g368"
-                      style="stroke-width: 0.163362"
-                      transform="matrix(1.60883 0 0 1.63047 4 0)"
-                    >
-                      <path
-                        id="path193"
-                        fill="#fff"
-                        d="M11.939 23.673h5.08a2.302 2.302 0 0 0 2.022-2.167v-7.29c0-.967-.788-1.75-1.76-1.75-.971 0-1.759.783-1.759 1.75v4.628a1.319 1.319 0 0 1-1.314 1.307h-2.293a1.762 1.762 0 0 0-1.76 1.753v.024a1.767 1.767 0 0 0 1.784 1.745zm-3.045-5.344a1.855 1.855 0 0 1-1.86-1.85V9.19a2.418 2.418 0 0 1 2.117-2.27h5.092a1.883 1.883 0 0 1 1.885 1.845c.005.495-.188.972-.537 1.324-.35.353-.826.552-1.324.554h-2.305c-.67 0-1.213.54-1.213 1.207v4.628c0 1.02-.83 1.848-1.856 1.85z"
-                        style="stroke-width: 0.0500968"
-                      />
-                      <path
-                        id="path195"
-                        fill="#fff"
-                        d="M14.244 7.025h-5.08a2.297 2.297 0 0 0-2.022 2.168v7.29a1.747 1.747 0 0 0 .854 1.585 1.768 1.768 0 0 0 1.807 0c.557-.332.885-.94.854-1.585v-4.632c-.001-.347.137-.68.384-.924a1.31 1.31 0 0 1 .93-.38h2.297a1.762 1.762 0 0 0 1.76-1.748v-.025a1.787 1.787 0 0 0-1.784-1.749Z"
-                        style="stroke-width: 0.0500968"
-                      />
-                      <path
-                        id="path197"
-                        fill="#fff"
-                        d="M15.045 3.736a7.346 7.346 0 0 1 5.194 2.14 7.262 7.262 0 0 1 2.138 5.17V25.07a2.287 2.287 0 0 1-1.941 1.861H11.06a7.35 7.35 0 0 1-5.186-2.134A7.265 7.265 0 0 1 3.73 19.64V6.004A2.282 2.282 0 0 1 5.986 3.72ZM15.077 0H5.844C2.616.007.002 2.61 0 5.819v13.89a10.922 10.922 0 0 0 3.231 7.753 11.049 11.049 0 0 0 7.802 3.204h9.763c2.782-.223 5.012-2.383 5.31-5.143V10.938a10.915 10.915 0 0 0-3.235-7.742A11.041 11.041 0 0 0 15.078 0Z"
-                        style="stroke-width: 0.0500968"
-                      />
-                    </g>
-                  </g>
-                </svg>
-              </div>
-            </li>
-            <li class="answer__service-item">
-              <div class="answer__service">
-                <p class="answer__service-name">Vultr</p>
-                <svg
-                  class="answer__icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  id="svg8"
-                  version="1.1"
-                  viewBox="0 0 50 50"
-                >
-                  <defs id="defs2">
-                    <linearGradient
-                      id="linear-gradient"
-                      x1="131.15"
-                      x2="143.52"
-                      y1="25.3"
-                      y2="33.64"
-                      gradientTransform="matrix(.26458 0 0 .26458 -5.708 31.233)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop209" offset="0" stop-color="#febe2d" />
-                      <stop id="stop211" offset="1" stop-color="#f85e23" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_3"
-                      x1="16.85"
-                      x2="36.49"
-                      y1="6.11"
-                      y2="6.11"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop214" offset="0" stop-color="#fbaa19" />
-                      <stop id="stop216" offset="1" stop-color="#ef3e23" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_4"
-                      x1="15.77"
-                      x2="17.31"
-                      y1="31.08"
-                      y2="26.87"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop219" offset="0" stop-color="#f78d1e" />
-                      <stop id="stop221" offset="1" stop-color="#f37121" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_2"
-                      x1="3.56"
-                      x2="27.49"
-                      y1="32.53"
-                      y2="6.88"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop224" offset="0" stop-color="#febe2d" />
-                      <stop id="stop226" offset="1" stop-color="#f04e23" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_5"
-                      x1="20.47"
-                      x2="7.23"
-                      y1="17.54"
-                      y2="37.92"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop229" offset="0" stop-color="#ea4425" />
-                      <stop id="stop231" offset="1" stop-color="#fdbb27" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_6"
-                      x1=".24"
-                      x2="42.04"
-                      y1="10.57"
-                      y2="10.57"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop234" offset="0" stop-color="#f47920" />
-                      <stop id="stop236" offset="1" stop-color="#e93825" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_7"
-                      x1="-21.84"
-                      x2="63.21"
-                      y1="7.78"
-                      y2="7.78"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop239" offset="0" stop-color="#fdca0b" />
-                      <stop id="stop241" offset="1" stop-color="#f5841f" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_8"
-                      x1="8.54"
-                      x2="17.39"
-                      y1="18.07"
-                      y2="48.94"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop244" offset="0" stop-color="#e73c25" />
-                      <stop id="stop246" offset="1" stop-color="#faa21b" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_9"
-                      x1="-51.37"
-                      x2="74.88"
-                      y1="23.08"
-                      y2="23.08"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop249" offset="0" stop-color="#fdba12" />
-                      <stop id="stop251" offset="1" stop-color="#f7921e" />
-                    </linearGradient>
-                    <linearGradient
-                      xlink:href="#GradientFill_2"
-                      id="GradientFill_2-2"
-                      x1=".08"
-                      x2="4.81"
-                      y1="16.72"
-                      y2="17.56"
-                      gradientTransform="matrix(.05921 0 0 .0598 -46.541 66.68)"
-                    />
-                    <linearGradient
-                      id="GradientFill_3-2"
-                      x1="16.85"
-                      x2="36.49"
-                      y1="6.11"
-                      y2="6.11"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop214-7" offset="0" stop-color="#fbaa19" />
-                      <stop id="stop216-0" offset="1" stop-color="#ef3e23" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_4-7"
-                      x1="15.77"
-                      x2="17.31"
-                      y1="31.08"
-                      y2="26.87"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop219-4" offset="0" stop-color="#f78d1e" />
-                      <stop id="stop221-8" offset="1" stop-color="#f37121" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_5-9"
-                      x1="20.47"
-                      x2="7.23"
-                      y1="17.54"
-                      y2="37.92"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop229-8" offset="0" stop-color="#ea4425" />
-                      <stop id="stop231-5" offset="1" stop-color="#fdbb27" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_6-6"
-                      x1=".24"
-                      x2="42.04"
-                      y1="10.57"
-                      y2="10.57"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop234-9" offset="0" stop-color="#f47920" />
-                      <stop id="stop236-3" offset="1" stop-color="#e93825" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_7-5"
-                      x1="-21.84"
-                      x2="63.21"
-                      y1="7.78"
-                      y2="7.78"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop239-9" offset="0" stop-color="#fdca0b" />
-                      <stop id="stop241-5" offset="1" stop-color="#f5841f" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_8-1"
-                      x1="8.54"
-                      x2="17.39"
-                      y1="18.07"
-                      y2="48.94"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop244-6" offset="0" stop-color="#e73c25" />
-                      <stop id="stop246-7" offset="1" stop-color="#faa21b" />
-                    </linearGradient>
-                    <linearGradient
-                      id="GradientFill_9-2"
-                      x1="-51.37"
-                      x2="74.88"
-                      y1="23.08"
-                      y2="23.08"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop id="stop249-9" offset="0" stop-color="#fdba12" />
-                      <stop id="stop251-2" offset="1" stop-color="#f7921e" />
-                    </linearGradient>
-                    <linearGradient
-                      xlink:href="#GradientFill_2"
-                      id="GradientFill_2-2-6"
-                      x1=".08"
-                      x2="4.81"
-                      y1="16.72"
-                      y2="17.56"
-                      gradientTransform="matrix(.0296 0 0 .0299 -55.014 23.537)"
-                    />
-                    <style id="style207">
-                      .cls-1,
-                      .cls-10,
-                      .cls-11,
-                      .cls-2,
-                      .cls-3,
-                      .cls-4,
-                      .cls-5,
-                      .cls-6,
-                      .cls-7,
-                      .cls-8,
-                      .cls-9 {
-                        fill-rule: evenodd;
-                      }
-                      .cls-1 {
-                        fill: url(#linear-gradient);
-                      }
-                      .cls-2 {
-                        fill: #fff;
-                      }
-                      .cls-3 {
-                        fill: url(#GradientFill_3);
-                      }
-                      .cls-4 {
-                        fill: url(#GradientFill_4);
-                      }
-                      .cls-5 {
-                        fill: url(#GradientFill_2);
-                      }
-                      .cls-6 {
-                        fill: url(#GradientFill_5);
-                      }
-                      .cls-7 {
-                        fill: url(#GradientFill_6);
-                      }
-                      .cls-8 {
-                        fill: url(#GradientFill_7);
-                      }
-                      .cls-9 {
-                        fill: url(#GradientFill_8);
-                      }
-                      .cls-10 {
-                        fill: url(#GradientFill_9);
-                      }
-                      .cls-11 {
-                        fill: url(#GradientFill_2-2);
-                      }
-                    </style>
-                  </defs>
-                  <g id="layer1">
-                    <path
-                      id="path48"
-                      d="M23.472 43.652c-.553-.278-1.93-2.352-8.721-13.144-7.137-11.34-9.315-14.834-11.754-18.862-.355-.586-.887-1.451-1.182-1.923-.305-.489-.536-1.135-.536-1.5 0-.723.56-1.591 1.26-1.95.671-.345 12.474-.34 13.158.006.267.134.904.809 1.418 1.498.513.69 1.18 1.516 1.483 1.835.303.32 3.623 5.449 7.378 11.397 5.508 8.726 6.844 10.972 6.917 11.624.084.762-.055 1.037-2.41 4.78-4.124 6.555-3.788 6.095-4.655 6.354-1.028.308-1.566.282-2.356-.115zm13.054-19.58c-.716-.327-1.151-.943-5.202-7.366-2.432-3.854-4.55-7.333-4.705-7.73-.24-.608-.244-.843-.03-1.494.457-1.395.67-1.434 7.932-1.445 5.054-.007 6.454.047 6.977.267.517.219.985.8 2.252 2.796 1.829 2.883 2.055 3.383 1.9 4.191-.148.773-6.075 10.132-6.697 10.574-.76.54-1.552.608-2.427.207z"
-                      style="fill: #caf0fd; stroke-width: 1"
-                    />
-                    <path
-                      id="path46"
-                      d="M23.658 43.652c-.56-.28-1.789-2.116-7.994-11.954-4.032-6.393-8.13-12.932-9.107-14.53a3837.31 3837.31 0 0 0-2.422-3.96c-.746-1.216-.8-1.791-.254-2.687.714-1.17 1.06-1.221 7.949-1.159l6.185.057.528.528c.55.55.985 1.213 6.736 10.27 7.316 11.524 7.473 11.786 7.473 12.49 0 .844.093.674-3.34 6.117-2.495 3.958-3 4.648-3.585 4.892-.865.361-1.341.347-2.169-.064zm12.829-19.72c-.5-.254-1.547-1.778-5.186-7.545-2.508-3.975-4.61-7.48-4.673-7.79-.176-.883.37-1.951 1.169-2.285.994-.416 12.537-.416 13.531 0 .67.28 1.08.846 3.572 4.936.67 1.098.796 1.873.423 2.59-.801 1.542-6.12 9.708-6.475 9.94-.68.446-1.66.51-2.361.153z"
-                      style="fill: #a2d2fc; stroke-width: 1"
-                    />
-                    <path
-                      id="path44"
-                      d="M23.934 43.736c-.32-.145-.72-.429-.891-.63-.436-.514-15.412-24.31-16.263-25.841a56.862 56.862 0 0 0-1.588-2.634c-1.755-2.718-1.859-3.361-.72-4.452l.592-.567h6.368c6.066 0 6.393.019 6.888.388.588.439 1.43 1.714 8.814 13.356 2.902 4.575 5.362 8.564 5.466 8.863.128.368.121.741-.022 1.152-.33.944-6.026 9.844-6.499 10.154-.64.42-1.5.504-2.145.21zM36.406 23.75c-.34-.184-1.907-2.488-4.64-6.821-2.27-3.599-4.328-6.892-4.573-7.318-.517-.901-.577-1.959-.146-2.573.68-.971.976-1.01 7.585-1.01 5.655 0 6.211.03 6.75.36.37.225 1.216 1.356 2.278 3.047 1.403 2.234 1.689 2.822 1.689 3.475 0 .678-.4 1.42-2.918 5.427-1.605 2.553-3.176 4.882-3.492 5.175-.653.607-1.677.704-2.533.238z"
-                      style="fill: #85bbfb; stroke-width: 1"
-                    />
-                    <path
-                      id="path42"
-                      d="M23.51 43.463C23.145 43.173 7.3 18.243 6.5 16.7c-.162-.315-.807-1.385-1.432-2.377-1.388-2.204-1.478-2.47-1.124-3.315.548-1.313.468-1.299 7.602-1.299 7.5 0 6.642-.274 8.5 2.712.63 1.013 1.256 1.974 1.393 2.137.136.162 2.694 4.17 5.684 8.905 4.544 7.2 5.435 8.726 5.435 9.316 0 .56-.411 1.358-1.998 3.88-1.1 1.747-2.378 3.786-2.842 4.532-1.34 2.155-1.852 2.616-2.901 2.611-.538-.003-1.048-.135-1.306-.34zM36.726 23.86c-.651-.27-1.048-.84-5.532-7.952-3.856-6.116-4.338-6.969-4.344-7.698-.007-.672.106-.933.626-1.453l.633-.633h12.97l.571.581c1.033 1.051 3.7 5.514 3.7 6.19 0 .458-.73 1.776-2.859 5.157-3.486 5.539-3.34 5.332-4.035 5.694-.623.325-1.137.359-1.73.114z"
-                      style="fill: #6bc4fd; stroke-width: 1"
-                    />
-                    <path
-                      id="path40"
-                      d="M23.373 43.273c-.643-.688-16.135-25.25-16.645-26.388-.213-.475-.898-1.66-1.523-2.634-1.475-2.3-1.538-3.425-.227-4.123.566-.301 12.438-.317 13.097-.017.251.115.931.962 1.51 1.883.58.921 1.365 2.07 1.745 2.552.38.483 3.03 4.583 5.89 9.112 4.06 6.43 5.217 8.403 5.282 9.009.078.722-.116 1.09-2.856 5.424-1.617 2.557-3.165 4.89-3.441 5.182-.41.436-.67.533-1.419.533-.75 0-1.006-.097-1.413-.533zm13.255-19.559c-.564-.288-1.392-1.476-4.903-7.03-2.324-3.677-4.403-7.023-4.62-7.436-.504-.961-.364-1.796.43-2.556l.591-.567h12.952l.554.581c.305.32 1.244 1.67 2.087 3 1.267 2 1.532 2.554 1.528 3.197-.005.664-.427 1.445-2.879 5.33-1.58 2.504-3.104 4.79-3.386 5.081-.68.7-1.495.839-2.354.4z"
-                      style="fill: #53b5fd; stroke-width: 1"
-                    />
-                    <path
-                      id="path38"
-                      d="M23.518 43.359c-.228-.234-4.087-6.257-8.575-13.386-5.554-8.823-8.16-13.13-8.16-13.487 0-.68.67-1.522 1.48-1.86.844-.353 11.992-.39 12.755-.043.346.158 2.045 2.685 5.7 8.476 2.863 4.538 5.305 8.442 5.426 8.675.58 1.114.362 1.636-2.717 6.502-1.616 2.554-3.163 4.851-3.438 5.106-.663.615-1.877.623-2.47.017zm12.734-20.04c-.959-.888-9.314-14.35-9.314-15.007 0-.663.28-1.26.845-1.8.39-.371.67-.387 6.826-.387h6.42l.561.662c.309.364 1.205 1.672 1.991 2.906 1.884 2.956 1.923 3.275.656 5.344-3.285 5.366-5.308 8.376-5.77 8.586-.832.38-1.589.276-2.215-.304z"
-                      style="fill: #238cfa; stroke-width: 1"
-                    />
-                    <path
-                      id="path36"
-                      d="M24.195 43.635c.194-.123.141-.195-.21-.283-.37-.093-2.224-2.902-8.68-13.148-8.91-14.14-8.729-13.789-7.685-14.833l.528-.528 6.372-.056 6.371-.056.48.444c.262.244 1.901 2.71 3.641 5.48 1.74 2.77 4.062 6.466 5.161 8.213 1.65 2.622 1.998 3.307 1.998 3.93 0 .64-.438 1.451-2.834 5.253-2.992 4.748-3.444 5.366-3.935 5.37-.268.003-.27.027-.014.192.21.136.052.187-.582.187-.555 0-.777-.06-.611-.165zm12.168-20.413c-.264-.24-2.45-3.569-4.856-7.398-4.824-7.676-4.87-7.781-3.809-8.842.312-.312.464-.575.34-.586-.126-.01-.01-.089.257-.174.655-.21 12.011-.21 12.5 0 .213.092.302.173.199.18-.104.008.006.15.244.317.435.304 1.062 1.213 2.787 4.04.956 1.565 1.125 2.292.717 3.08-.748 1.441-5.535 8.846-6.003 9.286-.72.677-1.693.717-2.376.097z"
-                      style="fill: #007afa; stroke-width: 1"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </li>
-          </ul>
-          <div class="answer__line"></div>
-          <ul class="answer__list range list">
-            <li class="answer__range-item">
-              <div class="answer__range-block">
-                <div class="answer__range answer__range--backblaze"></div>
-                <p class="answer__range-value">
-                  <span
-                    class="answer__range-span answer__range-span--backblaze"
-                  >
-                  </span
-                  >$
-                </p>
-              </div>
-            </li>
-            <li class="answer__range-item">
-              <div class="answer__range-block">
-                <div class="answer__range answer__range--bunny"></div>
-                <p class="answer__range-value">
-                  <span
-                    class="answer__range-span answer__range-span--bunny"
-                  ></span
-                  >$
-                </p>
-              </div>
-            </li>
-            <li class="answer__range-item">
-              <div class="answer__range-block">
-                <div class="answer__range answer__range--scaleway"></div>
-                <p class="answer__range-value">
-                  <span
-                    class="answer__range-span answer__range-span--scaleway"
-                  ></span
-                  >$
-                </p>
-              </div>
-            </li>
-            <li class="answer__range-item">
-              <div class="answer__range-block">
-                <div class="answer__range answer__range--vultr"></div>
-                <p class="answer__range-value">
-                  <span
-                    class="answer__range-span answer__range-span--vultr"
-                  ></span
-                  >$
-                </p>
-              </div>
-            </li>
-          </ul>
+        <div class="backdrop is-hidden">
+          <div class="modal">
+            <div class="modal__header">
+              <p class="modal__title active">Do you want to</p>
+              <a class="modal__link active" href="" onclick="return false;"
+                >start again?</a
+              >
+            </div>
+            <div class="modal__tables">
+              <div class="modal__table--left"></div>
+              <div class="modal__table--right"></div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
