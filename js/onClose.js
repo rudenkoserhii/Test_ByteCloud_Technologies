@@ -3,7 +3,6 @@ import { onManClick } from "./onManClick.js";
 import { onLinkClick } from "./onLinkClick.js";
 
 export function onClose() {
-console.log('click onClose')
   refs.linkModal.removeEventListener("click", onClose);
   refs.backdrop.classList.add("is-hidden");
   refs.men.forEach((man) => {

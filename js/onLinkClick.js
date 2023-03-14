@@ -4,8 +4,6 @@ import { countNet } from "./countNet.js";
 
 export function onLinkClick(e) {
 
-console.log('click onLink')
-
   if (e.target.innerText === "Next") {
     pointServer();
     refs.link.classList.remove("active");

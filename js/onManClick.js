@@ -2,8 +2,6 @@ import { refs } from "./refs.js";
 import { checkOnNext } from "./checkOnNext.js";
 
 export function onManClick(e) {
-
-console.log('click onMan')
   refs.link.classList.add("active");
 
   refs.men.forEach((man) => {
