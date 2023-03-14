@@ -1,12 +1,12 @@
 /* Global */
 html {
+font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  min-height: 820px;
   scroll-behavior: smooth;
 
-  background-image: linear-gradient(to bottom, #ffffff, lightgray);
+  background-image: linear-gradient(to bottom, #ebebeb, #d3d3d3);
   background-repeat: no-repeat;
 }
 /* Reset */
@@ -46,48 +46,51 @@ img {
 
 .map {
   position: relative;
+  padding: 120px 50px;
 }
 
-.header,
-.modal__header {
-  display: flex;
-  justify-content: left;
-  gap: 10px;
-}
 
 .title,
 .modal__title {
+
+  position: absolute;
+  top: 200px;
+  right: 300px;
+
   font-size: 22px;
+  border: none;
+min-width: 150px;
 
-  padding-top: 50px;
-  padding-bottom: 5px;
-  padding-left: 50px;
-
-  opacity: 0;
-  transition: opacity 500ms ease;
+  z-index: 15;
+  background-color: #4CA8F9;
+  color: white;
+  border-radius: 7px;
+box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+cursor: pointer;
 }
+
+.latency-time {
+  z-index: 6;
+  background-color: #4CA8F9;
+  border-radius: 7px;
+}
+
+.title:hover,
+.modal__title:hover {
+
+box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
+}
+
+.latency-time {
+  z-index: 6;
+  background-color: #4CA8F9;
+  border-radius: 7px;
+}
+
 
 
 .title.active,
 .modal__title.active {
-  opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.next-link,
-.modal__link {
-  font-size: 22px;
-
-  padding-top: 50px;
-  padding-bottom: 5px;
-
-  opacity: 0;
-  transition: opacity 500ms ease;
-}
-
-
-.next-link.active,
-.modal__link.active {
   opacity: 1;
   transition: opacity 500ms ease;
 }
@@ -97,7 +100,6 @@ img {
   top: 0;
   left: 0;
 
-
   z-index: -2;
 }
 
@@ -105,8 +107,8 @@ img {
 
 .man__image--small.north-america.active {
   position: absolute;
-  top: 310px;
-  left: 280px;
+  top: 391px;
+  left: 306px;
   z-index: 7;
   opacity: 1;
   transition: opacity 500ms ease;
@@ -114,8 +116,8 @@ img {
 
 .man__image--small.north-america {
   position: absolute;
-  top: 310px;
-  left: 280px;
+  top: 391px;
+  left: 306px;
   z-index: 7;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -123,8 +125,8 @@ img {
 
 .man_filled__image--small.north-america {
   position: absolute;
-  top: 310px;
-  left: 280px;
+  top: 391px;
+  left: 306px;
   z-index: 0;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -145,8 +147,8 @@ img {
 
 .man__image--medium.north-america.active {
   position: absolute;
-  top: 300px;
-  left: 297px;
+  top: 382px;
+  left: 348px;
   z-index: 7;
   opacity: 1;
   transition: opacity 500ms ease;
@@ -154,8 +156,8 @@ img {
 
 .man__image--medium.north-america {
   position: absolute;
-  top: 300px;
-  left: 297px;
+  top: 382px;
+  left: 348px;
   z-index: 7;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -163,8 +165,8 @@ img {
 
 .man_filled__image--medium.north-america {
   position: absolute;
-  top: 300px;
-  left: 297px;
+  top: 382px;
+  left: 348px;
   z-index: 0;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -189,8 +191,8 @@ img {
 
 .man__image--big.north-america.active {
   position: absolute;
-  top: 290px;
-  left: 319px;
+  top: 373px;
+  left: 395px;
   z-index: 7;
   opacity: 1;
   transition: opacity 500ms ease;
@@ -198,8 +200,8 @@ img {
 
 .man__image--big.north-america {
   position: absolute;
-  top: 290px;
-  left: 319px;
+  top: 373px;
+  left: 395px;
   z-index: 7;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -207,8 +209,8 @@ img {
 
 .man_filled__image--big.north-america {
   position: absolute;
-  top: 290px;
-  left: 319px;
+  top: 373px;
+  left: 395px;
   z-index: 0;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -233,16 +235,11 @@ img {
   transition: opacity 500ms ease;
 }
 
+
 .latency-time.north-america {
   position: absolute;
-  top: 310px;
-  left: 280px;
-  z-index: 6;
-
-  background-color: rgb(211, 211, 211, 0.7);
-
-  padding: 4px;
-  border-radius: 4px;
+  top: 306px;
+  left: 288px;
 
   opacity: 0;
   transition: opacity 500ms ease;
@@ -255,8 +252,8 @@ img {
 
 .device__image--large.north-america {
   position: absolute;
-  top: 300px;
-  left: 210px;
+  top: 423px;
+  left: 343px;
   z-index: 4;
 
   opacity: 0;
@@ -270,8 +267,8 @@ img {
 
 .device__image--medium.north-america {
   position: absolute;
-  top: 320px;
-  left: 260px;
+  top: 364px;
+  left: 274px;
   z-index: 4;
 
   opacity: 0;
@@ -285,8 +282,8 @@ img {
 
 .device__image--small.north-america {
   position: absolute;
-  top: 290px;
-  left: 310px;
+  top: 354px;
+  left: 420px;
   z-index: 4;
 
   opacity: 0;
@@ -300,8 +297,8 @@ img {
 
 .device-display__image--large.north-america {
   position: absolute;
-  top: 300px;
-  left: 220px;
+  top: 423.91px;
+  left: 343.89px;
   z-index: 5;
 
   opacity: 0;
@@ -315,8 +312,8 @@ img {
 
 .device-display__image--medium.north-america {
   position: absolute;
-  top: 320px;
-  left: 267px;
+  top: 364.81px;
+  left: 284.23px;
   z-index: 5;
 
   opacity: 0;
@@ -330,8 +327,8 @@ img {
 
 .device-display__image--small.north-america {
   position: absolute;
-  top: 290px;
-  left: 313px;
+  top: 354.01px;
+  left: 424.26px;
   z-index: 5;
 
   opacity: 0;
@@ -347,17 +344,17 @@ img {
   /* pointer-events: none; */
 }
 
-.circle__image--filled.east-usa {
+.circle__image--filled.east-usa, .circle__image--pushed.east-usa {
   position: absolute;
-  top: 310px;
-  left: 370px;
+  bottom: 575px;
+  left: 236px;
   z-index: 2;
 
   opacity: 0;
   transition: opacity 500ms ease;
 }
 
-.circle__image--filled.east-usa.active {
+.circle__image--filled.east-usa.active, .circle__image--pushed.east-usa.active {
   opacity: 1;
   transition: opacity 500ms ease;
 }
@@ -375,8 +372,8 @@ img {
 .circle__image--empty.east-usa {
   cursor: pointer;
   position: absolute;
-  top: 310px;
-  left: 370px;
+  bottom: 575px;
+  left: 236px;
   z-index: 3;
 
   opacity: 0;
@@ -390,8 +387,8 @@ img {
 
 .server__image.east-usa {
   position: absolute;
-  top: 305px;
-  left: 365px;
+  top: 378px;
+  left: 229px;
   z-index: 1;
 
   opacity: 0;
@@ -403,10 +400,10 @@ img {
   transition: opacity 500ms ease;
 }
 
-.circle__image--filled.west-usa {
+.circle__image--filled.west-usa, .circle__image--pushed.west-usa {
   position: absolute;
-  top: 320px;
-  left: 180px;
+  bottom: 615px;
+  left: 477px;
 
   z-index: 2;
 
@@ -414,7 +411,7 @@ img {
   transition: opacity 500ms ease;
 }
 
-.circle__image--filled.west-usa.active {
+.circle__image--filled.west-usa.active, .circle__image--pushed.west-usa.active {
   opacity: 1;
   transition: opacity 500ms ease;
 }
@@ -432,8 +429,8 @@ img {
 .circle__image--empty.west-usa {
   cursor: pointer;
   position: absolute;
-  top: 320px;
-  left: 180px;
+  bottom: 615px;
+  left: 477px;
 
   z-index: 3;
 
@@ -448,8 +445,8 @@ img {
 
 .server__image.west-usa {
   position: absolute;
-  top: 315px;
-  left: 175px;
+  top: 337px;
+  left: 470px;
 
   z-index: 1;
 
@@ -466,8 +463,8 @@ img {
 
 .man__image--small.south-america.active {
   position: absolute;
-  top: 510px;
-  left: 380px;
+  top: 657px;
+  left: 479px;
   z-index: 7;
   opacity: 1;
   transition: opacity 500ms ease;
@@ -475,8 +472,8 @@ img {
 
 .man__image--small.south-america {
   position: absolute;
-  top: 510px;
-  left: 380px;
+  top: 657px;
+  left: 479px;
   z-index: 7;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -484,8 +481,8 @@ img {
 
 .man_filled__image--small.south-america {
   position: absolute;
-  top: 510px;
-  left: 380px;
+  top: 657px;
+  left: 479px;
   z-index: 0;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -506,8 +503,8 @@ img {
 
 .man__image--medium.south-america.active {
   position: absolute;
-  top: 500px;
-  left: 397px;
+  top: 648px;
+  left: 521px;
   z-index: 7;
   opacity: 1;
   transition: opacity 500ms ease;
@@ -515,8 +512,8 @@ img {
 
 .man__image--medium.south-america {
   position: absolute;
-  top: 500px;
-  left: 397px;
+  top: 648px;
+  left: 521px;
   z-index: 7;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -524,8 +521,8 @@ img {
 
 .man_filled__image--medium.south-america {
   position: absolute;
-  top: 500px;
-  left: 397px;
+  top: 648px;
+  left: 521px;
   z-index: 0;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -550,8 +547,8 @@ img {
 
 .man__image--big.south-america.active {
   position: absolute;
-  top: 490px;
-  left: 422px;
+  top: 639px;
+  left: 568px;
   z-index: 7;
   opacity: 1;
   transition: opacity 500ms ease;
@@ -559,8 +556,8 @@ img {
 
 .man__image--big.south-america {
   position: absolute;
-  top: 490px;
-  left: 422px;
+  top: 639px;
+  left: 568px;
   z-index: 7;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -568,8 +565,8 @@ img {
 
 .man_filled__image--big.south-america {
   position: absolute;
-  top: 490px;
-  left: 422px;
+  top: 639px;
+  left: 568px;
   z-index: 0;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -598,14 +595,8 @@ img {
 
 .latency-time.south-america {
   position: absolute;
-  top: 480px;
-  left: 380px;
-  z-index: 6;
-
-  background-color: rgb(211, 211, 211, 0.7);
-
-  padding: 4px;
-  border-radius: 4px;
+  top: 676px;
+  left: 343px;
 
   opacity: 0;
   transition: opacity 500ms ease;
@@ -618,8 +609,8 @@ img {
 
 .device__image--large.south-america {
   position: absolute;
-  top: 480px;
-  left: 360px;
+  top: 651px;
+  left: 554px;
   z-index: 4;
 
   opacity: 0;
@@ -633,8 +624,8 @@ img {
 
 .device__image--medium.south-america {
   position: absolute;
-  top: 560px;
-  left: 400px;
+  top: 605px;
+  left: 470px;
   z-index: 4;
 
   opacity: 0;
@@ -648,8 +639,8 @@ img {
 
 .device__image--small.south-america {
   position: absolute;
-  top: 510px;
-  left: 430px;
+  top: 670px;
+  left: 504px;
   z-index: 4;
 
   opacity: 0;
@@ -663,8 +654,8 @@ img {
 
 .device-display__image--large.south-america {
   position: absolute;
-  top: 480px;
-  left: 370px;
+  top: 651.91px;
+  left: 554.89px;
   z-index: 5;
 
   opacity: 0;
@@ -678,8 +669,8 @@ img {
 
 .device-display__image--medium.south-america {
   position: absolute;
-  top: 560px;
-  left: 407px;
+  top: 605.81px;
+  left: 480.23px;
   z-index: 5;
 
   opacity: 0;
@@ -693,8 +684,8 @@ img {
 
 .device-display__image--small.south-america {
   position: absolute;
-  top: 510px;
-  left: 433px;
+  top: 670.01px;
+  left: 508.26px;
   z-index: 5;
 
   opacity: 0;
@@ -710,8 +701,8 @@ img {
 
 .man__image--small.asia.active {
   position: absolute;
-  top: 370px;
-  left: 900px;
+  top: 428px;
+  left: 1186px;
   z-index: 7;
   opacity: 1;
   transition: opacity 500ms ease;
@@ -719,8 +710,8 @@ img {
 
 .man__image--small.asia {
   position: absolute;
-  top: 370px;
-  left: 900px;
+  top: 428px;
+  left: 1186px;
   z-index: 7;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -728,8 +719,8 @@ img {
 
 .man_filled__image--small.asia {
   position: absolute;
-  top: 370px;
-  left: 900px;
+  top: 428px;
+  left: 1186px;
   z-index: 0;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -749,8 +740,8 @@ img {
 
 .man__image--medium.asia.active {
   position: absolute;
-  top: 360px;
-  left: 917px;
+  top: 419px;
+  left: 1228px;
   z-index: 7;
   opacity: 1;
   transition: opacity 500ms ease;
@@ -758,8 +749,8 @@ img {
 
 .man__image--medium.asia {
   position: absolute;
-  top: 360px;
-  left: 917px;
+  top: 419px;
+  left: 1228px;
   z-index: 7;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -767,8 +758,8 @@ img {
 
 .man_filled__image--medium.asia {
   position: absolute;
-  top: 360px;
-  left: 917px;
+  top: 419px;
+  left: 1228px;
   z-index: 0;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -790,8 +781,8 @@ img {
 
 .man__image--big.asia.active {
   position: absolute;
-  top: 350px;
-  left: 943px;
+  top: 410px;
+  left: 1275px;
   z-index: 7;
   opacity: 1;
   transition: opacity 500ms ease;
@@ -799,8 +790,8 @@ img {
 
 .man__image--big.asia {
   position: absolute;
-  top: 350px;
-  left: 943px;
+  top: 410px;
+  left: 1275px;
   z-index: 7;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -808,8 +799,8 @@ img {
 
 .man_filled__image--big.asia {
   position: absolute;
-  top: 350px;
-  left: 943px;
+  top: 410px;
+  left: 1275px;
   z-index: 0;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -833,14 +824,8 @@ img {
 
 .latency-time.asia {
   position: absolute;
-  top: 350px;
-  left: 900px;
-  z-index: 6;
-
-  background-color: rgb(211, 211, 211, 0.7);
-
-  padding: 4px;
-  border-radius: 4px;
+  top: 412px;
+  left: 1181px;
 
   opacity: 0;
   transition: opacity 500ms ease;
@@ -853,8 +838,8 @@ img {
 
 .device__image--large.asia {
   position: absolute;
-  top: 300px;
-  left: 1030px;
+  top: 465px;
+  left: 1266px;
   z-index: 4;
 
   opacity: 0;
@@ -868,8 +853,8 @@ img {
 
 .device__image--medium.asia {
   position: absolute;
-  top: 390px;
-  left: 860px;
+  top: 467px;
+  left: 1120px;
   z-index: 4;
 
   opacity: 0;
@@ -883,8 +868,8 @@ img {
 
 .device__image--small.asia {
   position: absolute;
-  top: 360px;
-  left: 980px;
+  top: 357px;
+  left: 1334px;
   z-index: 4;
 
   opacity: 0;
@@ -898,8 +883,8 @@ img {
 
 .device-display__image--large.asia {
   position: absolute;
-  top: 300px;
-  left: 1040px;
+  top: 465.91px;
+  left: 1266.89px;
   z-index: 5;
 
   opacity: 0;
@@ -913,8 +898,8 @@ img {
 
 .device-display__image--medium.asia {
   position: absolute;
-  top: 390px;
-  left: 867px;
+  top: 467.81px;
+  left: 1130.23px;
   z-index: 5;
 
   opacity: 0;
@@ -928,8 +913,8 @@ img {
 
 .device-display__image--small.asia {
   position: absolute;
-  top: 360px;
-  left: 983px;
+  top: 357.01px;
+  left: 1338.26px;
   z-index: 5;
 
   opacity: 0;
@@ -945,8 +930,8 @@ img {
 
 .man__image--small.oceania.active {
   position: absolute;
-  top: 570px;
-  left: 1040px;
+  top: 722px;
+  left: 1323px;
   z-index: 7;
   opacity: 1;
   transition: opacity 500ms ease;
@@ -954,8 +939,8 @@ img {
 
 .man__image--small.oceania {
   position: absolute;
-  top: 570px;
-  left: 1040px;
+  top: 722px;
+  left: 1323px;
   z-index: 7;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -963,8 +948,8 @@ img {
 
 .man_filled__image--small.oceania {
   position: absolute;
-  top: 570px;
-  left: 1040px;
+  top: 722px;
+  left: 1323px;
   z-index: 0;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -984,8 +969,8 @@ img {
 
 .man__image--medium.oceania.active {
   position: absolute;
-  top: 560px;
-  left: 1057px;
+  top: 713px;
+  left: 1365px;
   z-index: 7;
   opacity: 1;
   transition: opacity 500ms ease;
@@ -993,8 +978,8 @@ img {
 
 .man__image--medium.oceania {
   position: absolute;
-  top: 560px;
-  left: 1057px;
+  top: 713px;
+  left: 1365px;
   z-index: 7;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1002,8 +987,8 @@ img {
 
 .man_filled__image--medium.oceania {
   position: absolute;
-  top: 560px;
-  left: 1057px;
+  top: 713px;
+  left: 1365px;
   z-index: 0;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1025,8 +1010,8 @@ img {
 
 .man__image--big.oceania.active {
   position: absolute;
-  top: 550px;
-  left: 1082px;
+  top: 704px;
+  left: 1412px;
   z-index: 7;
   opacity: 1;
   transition: opacity 500ms ease;
@@ -1034,8 +1019,8 @@ img {
 
 .man__image--big.oceania {
   position: absolute;
-  top: 550px;
-  left: 1082px;
+  top: 704px;
+  left: 1412px;
   z-index: 7;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1043,8 +1028,8 @@ img {
 
 .man_filled__image--big.oceania {
   position: absolute;
-  top: 550px;
-  left: 1082px;
+  top: 704px;
+  left: 1412px;
   z-index: 0;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1068,14 +1053,8 @@ img {
 
 .latency-time.oceania {
   position: absolute;
-  top: 550px;
-  left: 1040px;
-  z-index: 6;
-
-  background-color: rgb(211, 211, 211, 0.7);
-
-  padding: 4px;
-  border-radius: 4px;
+  top: 645px;
+  left: 1336px;
 
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1088,8 +1067,8 @@ img {
 
 .device__image--large.oceania {
   position: absolute;
-  top: 560px;
-  left: 1050px;
+  top: 730px;
+  left: 1367px;
   z-index: 4;
 
   opacity: 0;
@@ -1103,8 +1082,8 @@ img {
 
 .device__image--medium.oceania {
   position: absolute;
-  top: 565px;
-  left: 1005px;
+  top: 706px;
+  left: 1297px;
   z-index: 4;
 
   opacity: 0;
@@ -1118,8 +1097,8 @@ img {
 
 .device__image--small.oceania {
   position: absolute;
-  top: 570px;
-  left: 1100px;
+  top: 703px;
+  left: 1430px;
   z-index: 4;
 
   opacity: 0;
@@ -1133,8 +1112,8 @@ img {
 
 .device-display__image--large.oceania {
   position: absolute;
-  top: 560px;
-  left: 1060px;
+  top: 730.91px;
+  left: 1367.89px;
   z-index: 5;
 
   opacity: 0;
@@ -1148,8 +1127,8 @@ img {
 
 .device-display__image--medium.oceania {
   position: absolute;
-  top: 565px;
-  left: 1012px;
+  top: 706.81px;
+  left: 1307.23px;
   z-index: 5;
 
   opacity: 0;
@@ -1163,8 +1142,8 @@ img {
 
 .device-display__image--small.oceania {
   position: absolute;
-  top: 570px;
-  left: 1103px;
+  top: 703.01px;
+  left: 1434.26px;
   z-index: 5;
 
   opacity: 0;
@@ -1176,17 +1155,17 @@ img {
   transition: opacity 500ms ease;
 }
 
-.circle__image--filled.singapore {
+.circle__image--filled.singapore, .circle__image--pushed.singapore {
   position: absolute;
-  top: 500px;
-  left: 970px;
+  bottom: 383px;
+  left: 1241px;
   z-index: 2;
 
   opacity: 0;
   transition: opacity 500ms ease;
 }
 
-.circle__image--filled.singapore.active {
+.circle__image--filled.singapore.active, .circle__image--pushed.singapore.active {
   opacity: 1;
   transition: opacity 500ms ease;
 }
@@ -1205,8 +1184,8 @@ img {
 .circle__image--empty.singapore {
   cursor: pointer;
   position: absolute;
-  top: 500px;
-  left: 970px;
+  bottom: 383px;
+  left: 1241px;
   z-index: 3;
 
   opacity: 0;
@@ -1220,8 +1199,8 @@ img {
 
 .server__image.singapore {
   position: absolute;
-  top: 495px;
-  left: 965px;
+  top: 569px;
+  left: 1234px;
   z-index: 1;
 
   opacity: 0;
@@ -1237,8 +1216,8 @@ img {
 
 .man__image--small.europe.active {
   position: absolute;
-  top: 280px;
-  left: 650px;
+  top: 369px;
+  left: 813px;
   z-index: 7;
   opacity: 1;
   transition: opacity 500ms ease;
@@ -1246,8 +1225,8 @@ img {
 
 .man__image--small.europe {
   position: absolute;
-  top: 280px;
-  left: 650px;
+  top: 369px;
+  left: 813px;
   z-index: 7;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1255,8 +1234,8 @@ img {
 
 .man_filled__image--small.europe {
   position: absolute;
-  top: 280px;
-  left: 650px;
+  top: 369px;
+  left: 813px;
   z-index: 0;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1276,8 +1255,8 @@ img {
 
 .man__image--medium.europe.active {
   position: absolute;
-  top: 270px;
-  left: 667px;
+  top: 360px;
+  left: 855px;
   z-index: 7;
   opacity: 1;
   transition: opacity 500ms ease;
@@ -1285,8 +1264,8 @@ img {
 
 .man__image--medium.europe {
   position: absolute;
-  top: 270px;
-  left: 667px;
+  top: 360px;
+  left: 855px;
   z-index: 7;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1294,8 +1273,8 @@ img {
 
 .man_filled__image--medium.europe {
   position: absolute;
-  top: 270px;
-  left: 667px;
+  top: 360px;
+  left: 855px;
   z-index: 0;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1317,8 +1296,8 @@ img {
 
 .man__image--big.europe.active {
   position: absolute;
-  top: 260px;
-  left: 692px;
+  top: 351px;
+  left: 902px;
   z-index: 7;
   opacity: 1;
   transition: opacity 500ms ease;
@@ -1326,8 +1305,8 @@ img {
 
 .man__image--big.europe {
   position: absolute;
-  top: 260px;
-  left: 692px;
+  top: 351px;
+  left: 902px;
   z-index: 7;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1335,8 +1314,8 @@ img {
 
 .man_filled__image--big.europe {
   position: absolute;
-  top: 260px;
-  left: 692px;
+  top: 351px;
+  left: 902px;
   z-index: 0;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1360,14 +1339,8 @@ img {
 
 .latency-time.europe {
   position: absolute;
-  top: 260px;
-  left: 650px;
-  z-index: 6;
-
-  background-color: rgb(211, 211, 211, 0.7);
-
-  padding: 4px;
-  border-radius: 4px;
+  top: 272px;
+  left: 769px;
 
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1380,8 +1353,8 @@ img {
 
 .device__image--large.europe {
   position: absolute;
-  top: 250px;
-  left: 750px;
+  top: 370px;
+  left: 870px;
   z-index: 4;
 
   opacity: 0;
@@ -1395,8 +1368,8 @@ img {
 
 .device__image--medium.europe {
   position: absolute;
-  top: 320px;
-  left: 580px;
+  top: 398px;
+  left: 733px;
   z-index: 4;
 
   opacity: 0;
@@ -1410,8 +1383,8 @@ img {
 
 .device__image--small.europe {
   position: absolute;
-  top: 280px;
-  left: 670px;
+  top: 307px;
+  left: 974px;
   z-index: 4;
 
   opacity: 0;
@@ -1425,8 +1398,8 @@ img {
 
 .device-display__image--large.europe {
   position: absolute;
-  top: 250px;
-  left: 760px;
+  top: 370.91px;
+  left: 870.89px;
   z-index: 5;
 
   opacity: 0;
@@ -1440,8 +1413,8 @@ img {
 
 .device-display__image--medium.europe {
   position: absolute;
-  top: 320px;
-  left: 587px;
+  top: 398.81px;
+  left: 743.23px;
   z-index: 5;
 
   opacity: 0;
@@ -1455,8 +1428,8 @@ img {
 
 .device-display__image--small.europe {
   position: absolute;
-  top: 280px;
-  left: 673px;
+  top: 307.01px;
+  left: 978.26px;
   z-index: 5;
 
   opacity: 0;
@@ -1468,17 +1441,18 @@ img {
   transition: opacity 500ms ease;
 }
 
-.circle__image--empty.germany {
-  pointer-events: auto;
-}
-
-.circle__image--filled.germany {
+.circle__image--filled.germany, .circle__image--pushed.germany {
   position: absolute;
-  top: 290px;
-  left: 620px;
+  bottom: 638px;
+  left: 804px;
   z-index: 2;
 
   opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.circle__image--filled.germany.active, .circle__image--pushed.germany.active {
+  opacity: 1;
   transition: opacity 500ms ease;
 }
 
@@ -1492,15 +1466,10 @@ img {
   transition: opacity 500ms ease;
 }
 
-.circle__image--filled.germany.active {
-  opacity: 1;
-  transition: opacity 500ms ease;
-}
-
 .circle__image--empty.germany {
   position: absolute;
-  top: 290px;
-  left: 620px;
+  bottom: 638px;
+  left: 804px;
   z-index: 3;
 
   opacity: 0;
@@ -1515,8 +1484,8 @@ img {
 
 .server__image.germany {
   position: absolute;
-  top: 290px;
-  left: 620px;
+  top: 317px;
+  left: 784px;
   z-index: 1;
 
   opacity: 0;

@@ -1,7 +1,6 @@
 export const refs = {
   men: document.querySelectorAll(".man__image"),
   server: document.querySelector(".server__image.europe"),
-  link: document.querySelector(".next-link"),
   linkModal: document.querySelector(".modal__link"),
   title: document.querySelector(".title"),
   devices: document.querySelectorAll(".device__image"),

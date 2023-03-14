@@ -11,8 +11,7 @@ export function countNet() {
     circle.removeEventListener("click", onRedClick);
   });
 
-  refs.link.classList.remove("active");
-  refs.link.removeEventListener("click", onLinkClick);
+  refs.title.removeEventListener("click", onLinkClick);
 
   let maxArray = [];
 

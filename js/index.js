@@ -9,7 +9,9 @@ import { onLinkClick } from "./onLinkClick.js";
 
 
 refs.men.forEach((man) => man.addEventListener("click", onManClick));
-refs.link.addEventListener("click", onLinkClick);
+refs.title.addEventListener("click", onLinkClick);
+refs.title.disabled = true;
+refs.title.style.pointerEvents = 'none';
 
 
 

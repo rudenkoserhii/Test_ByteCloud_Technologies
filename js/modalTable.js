@@ -13,8 +13,8 @@ export function modalTable(tableData) {
   const qly1 = "4K/2160p Ultra HD";
   const qly2 = "10800p Full HD";
   const qly3 = "480p";
-  const starFill = '<span class="starFill">&#9733</span>';
-  const starEmpty = '<span class="starEmpty">&#9734</span>';
+  const starFill = '<img class="star2" src="../images/files/star2.png" alt="Star filled yellow"/>';
+  const starEmpty = '<img class="star1" src="../images/files/star1.png" alt="Star empty yellow"/>';
 
   Object.entries(tableData["0"]).forEach((el, i) => {
     const begin = `<tr class="table__firstRow">

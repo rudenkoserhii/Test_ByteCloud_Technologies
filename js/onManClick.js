@@ -2,8 +2,10 @@ import { refs } from "./refs.js";
 import { checkOnNext } from "./checkOnNext.js";
 
 export function onManClick(e) {
-  refs.link.classList.add("active");
-
+  refs.title.innerText =
+    "Next";
+refs.title.disabled = false;
+refs.title.style.pointerEvents = 'auto';
   refs.men.forEach((man) => {
     if (
       "man__image--big" === e.target.className.split(" ")[1] &&

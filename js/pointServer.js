@@ -4,9 +4,9 @@ import { onManClick } from "./onManClick.js";
 
 export function pointServer() {
   refs.title.innerText =
-    "Where is your data? Choose one spot for Object Storage system...";
-  refs.link.innerText = "";
-
+    "Select servers";
+refs.title.disabled = true;
+refs.title.style.pointerEvents = 'none';
   refs.men.forEach((man) => {
     man.classList.remove("active");
     man.removeEventListener("click", onManClick);

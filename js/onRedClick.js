@@ -16,8 +16,8 @@ export function onRedClick(e) {
         server.classList.contains("active")
       ).length > 2
     ) {
-      refs.link.style.pointerEvents = "auto";
-      refs.link.style.color = "blue";
+refs.title.disabled = false;
+refs.title.style.pointerEvents = 'auto';
     }
   });
     checkOnStart();

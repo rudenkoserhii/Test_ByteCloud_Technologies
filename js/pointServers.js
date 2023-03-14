@@ -2,8 +2,6 @@ import { refs } from "./refs.js";
 import { onRedClick } from "./onRedClick.js";
 
 export function pointServers() {
-  refs.link.style.pointerEvents = "none";
-  refs.link.style.color = "rgb(211, 211, 211, 0.7)";
   refs.circlesEmpty.forEach((circle) => {
     if (
       !circle.classList.contains(
@@ -15,6 +13,4 @@ export function pointServers() {
       circle.addEventListener("click", onRedClick);
     }
   });
-  refs.title.innerText =
-    "Choose minimum two additional spots for ByteCloud and press ";
 }

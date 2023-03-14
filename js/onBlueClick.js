@@ -8,7 +8,7 @@ export function onBlueClick(e) {
   refs.servers.forEach((server) => {
     if (server.classList.contains(e.target.className.split(" ")[1])) {
       server.classList.add("active", "blue");
-      server.setAttribute("src", "./Elements_Old/server_blue.png");
+      server.setAttribute("src", "../images/files/Servers_blue_red.png");
     }
   });
   refs.circlesEmpty.forEach((circle) => {
@@ -16,7 +16,6 @@ export function onBlueClick(e) {
       circle.classList.remove("active");
     }
   });
-  refs.link.classList.add("active");
-  refs.link.innerText = "Start";
+  refs.title.innerText = "Start";
   pointServers();
 }

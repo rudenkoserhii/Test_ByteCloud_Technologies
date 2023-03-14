@@ -6,7 +6,6 @@ export function onLinkClick(e) {
 
   if (e.target.innerText === "Next") {
     pointServer();
-    refs.link.classList.remove("active");
   }
   if (
     e.target.innerText === "Start" &&
