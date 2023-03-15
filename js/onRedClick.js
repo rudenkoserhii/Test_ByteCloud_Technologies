@@ -6,6 +6,21 @@ export function onRedClick(e) {
     if (circle.classList.contains(e.target.className.split(" ")[1])) {
       circle.classList.remove("active");
     }
+
+  refs.circlesPushed.forEach((circle) => {
+    if (circle.classList.contains(e.target.className.split(" ")[1])) {
+      circle.classList.add("active");
+    }
+  });
+
+setTimeout(() => {
+  refs.circlesPushed.forEach((circle) => {
+    if (circle.classList.contains(e.target.className.split(" ")[1])) {
+      circle.classList.remove("active");
+    }
+  });
+}, 200)
+
     refs.servers.forEach((server) => {
       if (server.classList.contains(e.target.className.split(" ")[1])) {
         server.classList.add("active");
@@ -18,7 +33,8 @@ export function onRedClick(e) {
     ) {
 refs.title.disabled = false;
 refs.title.style.pointerEvents = 'auto';
+refs.title.style.opacity = '1';
     }
   });
-    checkOnStart();
+    // checkOnStart();
 }

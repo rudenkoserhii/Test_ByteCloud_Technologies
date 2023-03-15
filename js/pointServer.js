@@ -7,6 +7,8 @@ export function pointServer() {
     "Select servers";
 refs.title.disabled = true;
 refs.title.style.pointerEvents = 'none';
+refs.title.style.opacity = '0.5';
+
   refs.men.forEach((man) => {
     man.classList.remove("active");
     man.removeEventListener("click", onManClick);

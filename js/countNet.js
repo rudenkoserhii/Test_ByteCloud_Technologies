@@ -4,14 +4,12 @@ import { countLatencyTime } from "./countLatencyTime.js";
 import { onLinkClick } from "./onLinkClick.js";
 import { onRedClick } from "./onRedClick.js";
 
-export function countNet() {
+export function countNet(value) {
   refs.circlesEmpty.forEach((circle) => {
     circle.classList.remove("active");
     circle.style.pointerEvents = "none";
     circle.removeEventListener("click", onRedClick);
   });
-
-  refs.title.removeEventListener("click", onLinkClick);
 
   let maxArray = [];
 
@@ -20,7 +18,7 @@ export function countNet() {
       maxArray.push(
         `arc_${
           Array.from(refs.servers)
-            .filter((server) => server.classList.contains("blue"))[0]
+            .filter((server) => server.classList.contains("red"))[0]
             .className.split(" ")[0]
         }_${device.className.split(" ")[2]}_${
           device.className.split(" ")[1].split("--")[1]
@@ -29,7 +27,7 @@ export function countNet() {
           distances[
             `${
               Array.from(refs.servers)
-                .filter((server) => server.classList.contains("blue"))[0]
+                .filter((server) => server.classList.contains("red"))[0]
                 .className.split(" ")[0]
             }_${device.className.split(" ")[2]}_${
               device.className.split(" ")[1].split("--")[1]
@@ -62,5 +60,16 @@ export function countNet() {
             .sort((a, b) => a.split(", ")[1] - b.split(", ")[1])[0])
       ),
   ];
-  countLatencyTime(minArray, maxArray, []);
+
+if(value === 'first') {
+  countLatencyTime('first', minArray);
+} 
+
+if(value === 'second') {
+  countLatencyTime('second', maxArray);
+} 
+
+if (value === 'third') {
+  countLatencyTime('third', []);
+}
 }

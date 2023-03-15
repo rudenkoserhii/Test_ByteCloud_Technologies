@@ -1,11 +1,12 @@
 export const refs = {
   men: document.querySelectorAll(".man__image"),
   server: document.querySelector(".server__image.europe"),
-  linkModal: document.querySelector(".modal__link"),
+  btnClose: document.querySelector(".btn__close"),
   title: document.querySelector(".title"),
   devices: document.querySelectorAll(".device__image"),
   devicesDisplay: document.querySelectorAll(".device-display__image"),
   circlesEmpty: document.querySelectorAll(".circle__image--empty"),
+  circlesPushed: document.querySelectorAll(".circle__image--pushed"),
   circles: document.querySelectorAll(".circle__image--filled"),
   backdrop: document.querySelector(".backdrop"),
   servers: document.querySelectorAll(".server__image"),

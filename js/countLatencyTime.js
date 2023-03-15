@@ -1,22 +1,19 @@
 import { distances } from "./distances.js";
 import { refs } from "./refs.js";
 import { continents } from "./continents.js";
-import { clean } from "./clean.js";
+import { onLinkClick } from "./onLinkClick.js";
 import { modalTable } from "./modalTable.js";
 
-export function countLatencyTime(latencyArray, maxArray, table) {
-  let tableData = table;
-  maxArray
-    ? (refs.title.innerText = "ByteCloud...")
-    : (refs.title.innerText = "Object Storage...");
-
+  let tableData = [];
+export function countLatencyTime(value, array) {
+if(array.length > 0) {
   let data = {};
-  continents(latencyArray).forEach((continent) => {
+  continents(array).forEach((continent) => {
     let count = 0;
     let sumLatency = 0;
     let averageLatency = 0;
     let time = [];
-    latencyArray.forEach((name) => {
+    array.forEach((name) => {
       if (continent === name.split(", ")[0].split("_")[2]) {
         count += 1;
         sumLatency += Number(name.split(", ")[1]);
@@ -40,7 +37,7 @@ export function countLatencyTime(latencyArray, maxArray, table) {
       }
     });
   });
-  latencyArray.forEach((name) => {
+  array.forEach((name) => {
     refs.devicesDisplay.forEach((display) => {
       if (
         display.className.split(" ")[2] === name.split(", ")[0].split("_")[2] &&
@@ -104,18 +101,33 @@ export function countLatencyTime(latencyArray, maxArray, table) {
     });
   });
   tableData.push(data);
-  if (maxArray) {
-    setTimeout(() => {
-      clean(["infos", "arrows", "devicesDisplay"]);
-      refs.infos.forEach((info) => (info.childNodes[0].textContent = ""));
-      refs.infosValue.forEach((infoValue) => (infoValue.textContent = ""));
-      countLatencyTime(maxArray, null, tableData);
-    }, latencyArray.map((el) => Number(el.split(", ")[1]) * 20).sort((a, b) => b - a)[0] + 200);
-  } else {
-    setTimeout(() => {
-      clean(["title", "infos", "arrows", "devicesDisplay", "devices", "servers"]);
-      modalTable(tableData);
+
+
+  if (value === 'first') {
+setTimeout(() => {
+      refs.title.innerText = "Check Default";
+refs.title.disabled = false;
+refs.title.style.pointerEvents = 'auto';
+refs.title.style.opacity = '1';
+}, array.map((el) => Number(el.split(", ")[1]) * 20).sort((a, b) => b - a)[0])
+  } else  if (value === 'second') {
+setTimeout(() => {
+      refs.title.innerText = "Get Results";
+refs.title.disabled = false;
+refs.title.style.pointerEvents = 'auto';
+refs.title.style.opacity = '1';
+}, array.map((el) => Number(el.split(", ")[1]) * 20).sort((a, b) => b - a)[0])
+
+
+  } 
+}
+if (value === 'third') {
+setTimeout(() => {
+
+modalTable(tableData);
       tableData = [];
-    }, latencyArray.map((el) => Number(el.split(", ")[1]) * 20).sort((a, b) => b - a)[0] + 200);
-  }
+}, 100)
+
+
+  } 
 }

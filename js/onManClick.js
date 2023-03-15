@@ -6,6 +6,8 @@ export function onManClick(e) {
     "Next";
 refs.title.disabled = false;
 refs.title.style.pointerEvents = 'auto';
+refs.title.style.opacity = '1';
+
   refs.men.forEach((man) => {
     if (
       "man__image--big" === e.target.className.split(" ")[1] &&
