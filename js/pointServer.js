@@ -3,11 +3,10 @@ import { onBlueClick } from "./onBlueClick.js";
 import { onManClick } from "./onManClick.js";
 
 export function pointServer() {
-  refs.title.innerText =
-    "Select servers";
-refs.title.disabled = true;
-refs.title.style.pointerEvents = 'none';
-refs.title.style.opacity = '0.5';
+  refs.title.innerText = "Select servers";
+  refs.title.disabled = true;
+  refs.title.style.pointerEvents = "none";
+  refs.title.style.opacity = "0.5";
 
   refs.men.forEach((man) => {
     man.classList.remove("active");
@@ -17,5 +16,4 @@ refs.title.style.opacity = '0.5';
     circle.classList.add("active");
     circle.addEventListener("click", onBlueClick);
   });
-
 }

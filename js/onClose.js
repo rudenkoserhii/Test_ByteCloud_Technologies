@@ -3,20 +3,18 @@ import { onManClick } from "./onManClick.js";
 import { onLinkClick } from "./onLinkClick.js";
 
 export function onClose() {
-
-refs.btnClose.removeEventListener('click', onClose);
+  refs.btnClose.removeEventListener("click", onClose);
   refs.backdrop.classList.add("is-hidden");
-refs.title.classList.add("active");
-refs.title.disabled = false;
-refs.title.style.pointerEvents = 'auto';
-refs.title.style.opacity = '1';
+  refs.title.classList.add("active");
+  refs.title.disabled = false;
+  refs.title.style.pointerEvents = "auto";
+  refs.title.style.opacity = "1";
 
   refs.men.forEach((man) => {
     man.classList.add("active");
     man.addEventListener("click", onManClick);
   });
-  refs.title.textContent =
-    "Choose...";
+  refs.title.textContent = "Choose...";
   refs.circlesEmpty.forEach((circle) => {
     circle.style.pointerEvents = "auto";
   });
@@ -31,5 +29,5 @@ refs.title.style.opacity = '1';
   refs.infosValue.forEach((infoValue) => {
     infoValue.textContent = "";
   });
-refs.title.addEventListener('click', onLinkClick);
+  refs.title.addEventListener("click", onLinkClick);
 }

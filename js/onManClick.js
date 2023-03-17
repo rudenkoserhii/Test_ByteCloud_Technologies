@@ -1,12 +1,10 @@
 import { refs } from "./refs.js";
-import { checkOnNext } from "./checkOnNext.js";
 
 export function onManClick(e) {
-  refs.title.innerText =
-    "Next";
-refs.title.disabled = false;
-refs.title.style.pointerEvents = 'auto';
-refs.title.style.opacity = '1';
+  refs.title.innerText = "Next";
+  refs.title.disabled = false;
+  refs.title.style.pointerEvents = "auto";
+  refs.title.style.opacity = "1";
 
   refs.men.forEach((man) => {
     if (
@@ -66,6 +64,4 @@ refs.title.style.opacity = '1';
       });
     }
   });
-
-  checkOnNext();
 }

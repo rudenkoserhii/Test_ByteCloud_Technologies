@@ -36,5 +36,4 @@ refs.title.style.pointerEvents = 'auto';
 refs.title.style.opacity = '1';
     }
   });
-    // checkOnStart();
 }

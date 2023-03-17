@@ -1,7 +1,7 @@
 import { refs } from "./refs.js";
 import { onRedClick } from "./onRedClick.js";
 
-export function pointServers() {
+export function pointServers(after) {
   refs.circlesEmpty.forEach((circle) => {
     if (
       !circle.classList.contains(

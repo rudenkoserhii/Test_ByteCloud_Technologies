@@ -1,7 +1,6 @@
 import { refs } from "./refs.js";
 import { distances } from "./distances.js";
 import { countLatencyTime } from "./countLatencyTime.js";
-import { onLinkClick } from "./onLinkClick.js";
 import { onRedClick } from "./onRedClick.js";
 
 export function countNet(value) {
@@ -61,15 +60,15 @@ export function countNet(value) {
       ),
   ];
 
-if(value === 'first') {
-  countLatencyTime('first', minArray);
-} 
+  if (value === "first") {
+    countLatencyTime("first", minArray);
+  }
 
-if(value === 'second') {
-  countLatencyTime('second', maxArray);
-} 
+  if (value === "second") {
+    countLatencyTime("second", maxArray);
+  }
 
-if (value === 'third') {
-  countLatencyTime('third', []);
-}
+  if (value === "third") {
+    countLatencyTime("third", []);
+  }
 }

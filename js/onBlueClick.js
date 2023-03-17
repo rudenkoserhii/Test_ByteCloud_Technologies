@@ -16,14 +16,13 @@ export function onBlueClick(e) {
     }
   });
 
-setTimeout(() => {
-  refs.circlesPushed.forEach((circle) => {
-    if (circle.classList.contains(e.target.className.split(" ")[1])) {
-      circle.classList.remove("active");
-    }
-  });
-}, 200)
-
+  setTimeout(() => {
+    refs.circlesPushed.forEach((circle) => {
+      if (circle.classList.contains(e.target.className.split(" ")[1])) {
+        circle.classList.remove("active");
+      }
+    });
+  }, 200);
 
   refs.servers.forEach((server) => {
     if (server.classList.contains(e.target.className.split(" ")[1])) {

@@ -1,4 +1,3 @@
-/* Global */
 html {
 }
 
@@ -39,42 +38,6 @@ img {
   color: inherit;
 }
 
-/* Main */
-
-/* .abc {
-position: relative;
-display: inline-block;
-}
-
-.imgabc {
-width: 100%;
-height: 100%;
-}
-
-.abc::before { */
-/* display: block;
-    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    content: '';
-    width: 50%;
-    height: 50%;
-    background: black;
-    position: absolute;
-    top: 0;
-    left: 0; */
-  /* }
-
-.abc::after {
-display: inline-block;
-    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    content: '';
-    background-image: url('./images/files/d2.png');
-    position: absolute;
-    top: 0;
-    left: 0;
-width: 50%;
-height: 100%;
-  } */
-
 .map {
   position: relative;
 }
@@ -101,7 +64,6 @@ height: 100%;
 
   opacity: 0;
   transition: opacity 500ms ease;
-
 }
 
 .latency-time {
@@ -287,12 +249,38 @@ height: 100%;
 
 .device__image--large.north-america {
   position: absolute;
-  top: 423px;
-  left: 343px;
+  top: 398px;
+  left: 331px;
   z-index: 4;
+  width: 86px;
+  height: 86px;
+
+  background-image: url("./images/files/phone.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 
   opacity: 0;
   transition: opacity 500ms ease;
+}
+
+.device-display__image--large.north-america {
+  position: absolute;
+  bottom: 17.68px;
+  left: 32.68px;
+  z-index: 5;
+
+  transform: rotate(-60deg);
+
+  object-fit: cover;
+  object-position: 150% 0;
+
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.device-display__image--large.north-america.tron {
+  width: 10px;
 }
 
 .device__image--large.north-america.active {
@@ -300,11 +288,35 @@ height: 100%;
   transition: opacity 500ms ease;
 }
 
+.device-display__image--large.north-america.active {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+
 .device__image--medium.north-america {
   position: absolute;
-  top: 364px;
-  left: 274px;
+  top: 353px;
+  left: 264px;
   z-index: 4;
+  width: 86px;
+  height: 86px;
+
+  background-image: url("./images/files/laptop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.device-display__image--medium.north-america {
+  position: absolute;
+  bottom: 28.18px;
+  left: 17.49px;
+  z-index: 5;
+
+  object-fit: cover;
+  object-position: 0 150%;
 
   opacity: 0;
   transition: opacity 500ms ease;
@@ -315,11 +327,35 @@ height: 100%;
   transition: opacity 500ms ease;
 }
 
+.device-display__image--medium.north-america.active {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+
 .device__image--small.north-america {
   position: absolute;
-  top: 354px;
-  left: 420px;
+  top: 344px;
+  left: 405px;
   z-index: 4;
+  width: 86px;
+  height: 86px;
+
+  background-image: url("./images/files/display.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.device-display__image--small.north-america {
+  position: absolute;
+  bottom: 24.67px;
+  left: 22.69px;
+  z-index: 5;
+
+  object-fit: cover;
+  object-position: 0 150%;
 
   opacity: 0;
   transition: opacity 500ms ease;
@@ -327,46 +363,6 @@ height: 100%;
 
 .device__image--small.north-america.active {
   opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--large.north-america {
-  position: absolute;
-  top: 423.91px;
-  left: 343.89px;
-  z-index: 5;
-
-  opacity: 0;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--large.north-america.active {
-  opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--medium.north-america {
-  position: absolute;
-  top: 364.81px;
-  left: 284.23px;
-  z-index: 5;
-
-  opacity: 0;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--medium.north-america.active {
-  opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--small.north-america {
-  position: absolute;
-  top: 354.01px;
-  left: 424.26px;
-  z-index: 5;
-
-  opacity: 0;
   transition: opacity 500ms ease;
 }
 
@@ -525,12 +521,38 @@ height: 100%;
 
 .device__image--large.south-america {
   position: absolute;
-  top: 651px;
-  left: 554px;
+  top: 625px;
+  left: 540px;
   z-index: 4;
+  width: 86px;
+  height: 86px;
+
+  background-image: url("./images/files/phone.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 
   opacity: 0;
   transition: opacity 500ms ease;
+}
+
+.device-display__image--large.south-america {
+  position: absolute;
+  bottom: 17.68px;
+  left: 32.68px;
+  z-index: 5;
+
+  transform: rotate(-60deg);
+
+  object-fit: cover;
+  object-position: 150% 0;
+
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.device-display__image--large.south-america.tron {
+  width: 10px;
 }
 
 .device__image--large.south-america.active {
@@ -538,11 +560,35 @@ height: 100%;
   transition: opacity 500ms ease;
 }
 
+.device-display__image--large.south-america.active {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+
 .device__image--medium.south-america {
   position: absolute;
-  top: 605px;
-  left: 470px;
+  top: 593px;
+  left: 461px;
   z-index: 4;
+  width: 86px;
+  height: 86px;
+
+  background-image: url("./images/files/laptop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.device-display__image--medium.south-america {
+  position: absolute;
+  bottom: 28.18px;
+  left: 17.49px;
+  z-index: 5;
+
+  object-fit: cover;
+  object-position: 0 150%;
 
   opacity: 0;
   transition: opacity 500ms ease;
@@ -553,11 +599,35 @@ height: 100%;
   transition: opacity 500ms ease;
 }
 
+.device-display__image--medium.south-america.active {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+
 .device__image--small.south-america {
   position: absolute;
-  top: 670px;
-  left: 504px;
+  top: 657px;
+  left: 490px;
   z-index: 4;
+  width: 86px;
+  height: 86px;
+
+  background-image: url("./images/files/display.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.device-display__image--small.south-america {
+  position: absolute;
+  bottom: 24.67px;
+  left: 22.69px;
+  z-index: 5;
+
+  object-fit: cover;
+  object-position: 0 150%;
 
   opacity: 0;
   transition: opacity 500ms ease;
@@ -565,46 +635,6 @@ height: 100%;
 
 .device__image--small.south-america.active {
   opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--large.south-america {
-  position: absolute;
-  top: 651.91px;
-  left: 554.89px;
-  z-index: 5;
-
-  opacity: 0;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--large.south-america.active {
-  opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--medium.south-america {
-  position: absolute;
-  top: 605.81px;
-  left: 480.23px;
-  z-index: 5;
-
-  opacity: 0;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--medium.south-america.active {
-  opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--small.south-america {
-  position: absolute;
-  top: 670.01px;
-  left: 508.26px;
-  z-index: 5;
-
-  opacity: 0;
   transition: opacity 500ms ease;
 }
 
@@ -754,12 +784,38 @@ height: 100%;
 
 .device__image--large.asia {
   position: absolute;
-  top: 465px;
-  left: 1266px;
+  top: 440px;
+  left: 1254px;
   z-index: 4;
+  width: 86px;
+  height: 86px;
+
+  background-image: url("./images/files/phone.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 
   opacity: 0;
   transition: opacity 500ms ease;
+}
+
+.device-display__image--large.asia {
+  position: absolute;
+  bottom: 17.68px;
+  left: 32.68px;
+  z-index: 5;
+
+  transform: rotate(-60deg);
+
+  object-fit: cover;
+  object-position: 150% 0;
+
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.device-display__image--large.asia.tron {
+  width: 10px;
 }
 
 .device__image--large.asia.active {
@@ -767,11 +823,35 @@ height: 100%;
   transition: opacity 500ms ease;
 }
 
+.device-display__image--large.asia.active {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+
 .device__image--medium.asia {
   position: absolute;
-  top: 467px;
-  left: 1120px;
+  top: 456px;
+  left: 1110px;
   z-index: 4;
+  width: 86px;
+  height: 86px;
+
+  background-image: url("./images/files/laptop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.device-display__image--medium.asia {
+  position: absolute;
+  bottom: 28.18px;
+  left: 17.49px;
+  z-index: 5;
+
+  object-fit: cover;
+  object-position: 0 150%;
 
   opacity: 0;
   transition: opacity 500ms ease;
@@ -782,11 +862,35 @@ height: 100%;
   transition: opacity 500ms ease;
 }
 
+.device-display__image--medium.asia.active {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+
 .device__image--small.asia {
   position: absolute;
-  top: 357px;
-  left: 1334px;
+  top: 345px;
+  left: 1320px;
   z-index: 4;
+  width: 86px;
+  height: 86px;
+
+  background-image: url("./images/files/display.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.device-display__image--small.asia {
+  position: absolute;
+  bottom: 24.67px;
+  left: 22.69px;
+  z-index: 5;
+
+  object-fit: cover;
+  object-position: 0 150%;
 
   opacity: 0;
   transition: opacity 500ms ease;
@@ -794,46 +898,6 @@ height: 100%;
 
 .device__image--small.asia.active {
   opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--large.asia {
-  position: absolute;
-  top: 465.91px;
-  left: 1266.89px;
-  z-index: 5;
-
-  opacity: 0;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--large.asia.active {
-  opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--medium.asia {
-  position: absolute;
-  top: 467.81px;
-  left: 1130.23px;
-  z-index: 5;
-
-  opacity: 0;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--medium.asia.active {
-  opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--small.asia {
-  position: absolute;
-  top: 357.01px;
-  left: 1338.26px;
-  z-index: 5;
-
-  opacity: 0;
   transition: opacity 500ms ease;
 }
 
@@ -983,12 +1047,38 @@ height: 100%;
 
 .device__image--large.oceania {
   position: absolute;
-  top: 730px;
-  left: 1367px;
+  top: 705px;
+  left: 1355px;
   z-index: 4;
+  width: 86px;
+  height: 86px;
+
+  background-image: url("./images/files/phone.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 
   opacity: 0;
   transition: opacity 500ms ease;
+}
+
+.device-display__image--large.oceania {
+  position: absolute;
+  bottom: 17.68px;
+  left: 32.68px;
+  z-index: 5;
+
+  transform: rotate(-60deg);
+
+  object-fit: cover;
+  object-position: 150% 0;
+
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.device-display__image--large.oceania.tron {
+  width: 10px;
 }
 
 .device__image--large.oceania.active {
@@ -996,11 +1086,35 @@ height: 100%;
   transition: opacity 500ms ease;
 }
 
+.device-display__image--large.oceania.active {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+
 .device__image--medium.oceania {
   position: absolute;
-  top: 706px;
-  left: 1297px;
+  top: 695px;
+  left: 1288px;
   z-index: 4;
+  width: 86px;
+  height: 86px;
+
+  background-image: url("./images/files/laptop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.device-display__image--medium.oceania {
+  position: absolute;
+  bottom: 28.18px;
+  left: 17.49px;
+  z-index: 5;
+
+  object-fit: cover;
+  object-position: 0 150%;
 
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1011,11 +1125,35 @@ height: 100%;
   transition: opacity 500ms ease;
 }
 
+.device-display__image--medium.oceania.active {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+
 .device__image--small.oceania {
   position: absolute;
-  top: 703px;
-  left: 1430px;
+  top: 693px;
+  left: 1415px;
   z-index: 4;
+  width: 86px;
+  height: 86px;
+
+  background-image: url("./images/files/display.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.device-display__image--small.oceania {
+  position: absolute;
+  bottom: 24.67px;
+  left: 22.69px;
+  z-index: 5;
+
+  object-fit: cover;
+  object-position: 0 150%;
 
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1023,46 +1161,6 @@ height: 100%;
 
 .device__image--small.oceania.active {
   opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--large.oceania {
-  position: absolute;
-  top: 730.91px;
-  left: 1367.89px;
-  z-index: 5;
-
-  opacity: 0;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--large.oceania.active {
-  opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--medium.oceania {
-  position: absolute;
-  top: 706.81px;
-  left: 1307.23px;
-  z-index: 5;
-
-  opacity: 0;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--medium.oceania.active {
-  opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--small.oceania {
-  position: absolute;
-  top: 703.01px;
-  left: 1434.26px;
-  z-index: 5;
-
-  opacity: 0;
   transition: opacity 500ms ease;
 }
 
@@ -1212,12 +1310,38 @@ height: 100%;
 
 .device__image--large.europe {
   position: absolute;
-  top: 370px;
-  left: 870px;
+  top: 345px;
+  left: 858px;
   z-index: 4;
+  width: 86px;
+  height: 86px;
+
+  background-image: url("./images/files/phone.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 
   opacity: 0;
   transition: opacity 500ms ease;
+}
+
+.device-display__image--large.europe {
+  position: absolute;
+  bottom: 17.68px;
+  left: 32.68px;
+  z-index: 5;
+
+  transform: rotate(-60deg);
+
+  object-fit: cover;
+  object-position: 150% 0;
+
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.device-display__image--large.europe.tron {
+  width: 10px;
 }
 
 .device__image--large.europe.active {
@@ -1225,11 +1349,35 @@ height: 100%;
   transition: opacity 500ms ease;
 }
 
+.device-display__image--large.europe.active {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+
 .device__image--medium.europe {
   position: absolute;
-  top: 398px;
-  left: 733px;
+  top: 398.81px;
+  left: 743.23px;
   z-index: 4;
+  width: 86px;
+  height: 86px;
+
+  background-image: url("./images/files/laptop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.device-display__image--medium.europe {
+  position: absolute;
+  bottom: 28.18px;
+  left: 17.49px;
+  z-index: 5;
+
+  object-fit: cover;
+  object-position: 0 150%;
 
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1240,11 +1388,35 @@ height: 100%;
   transition: opacity 500ms ease;
 }
 
+.device-display__image--medium.europe.active {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+
 .device__image--small.europe {
   position: absolute;
-  top: 307px;
-  left: 974px;
+  top: 307.01px;
+  left: 978.26px;
   z-index: 4;
+  width: 86px;
+  height: 86px;
+
+  background-image: url("./images/files/display.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.device-display__image--small.europe {
+  position: absolute;
+  bottom: 24.67px;
+  left: 22.69px;
+  z-index: 5;
+
+  object-fit: cover;
+  object-position: 0 150%;
 
   opacity: 0;
   transition: opacity 500ms ease;
@@ -1252,46 +1424,6 @@ height: 100%;
 
 .device__image--small.europe.active {
   opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--large.europe {
-  position: absolute;
-  top: 370.91px;
-  left: 870.89px;
-  z-index: 5;
-
-  opacity: 0;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--large.europe.active {
-  opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--medium.europe {
-  position: absolute;
-  top: 398.81px;
-  left: 743.23px;
-  z-index: 5;
-
-  opacity: 0;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--medium.europe.active {
-  opacity: 1;
-  transition: opacity 500ms ease;
-}
-
-.device-display__image--small.europe {
-  position: absolute;
-  top: 307.01px;
-  left: 978.26px;
-  z-index: 5;
-
-  opacity: 0;
   transition: opacity 500ms ease;
 }
 
@@ -1491,12 +1623,17 @@ height: 100%;
 
 .server__image.east-usa {
   position: absolute;
-  top: 378px;
-  left: 229px;
+  top: 390px;
+  left: 240px;
   z-index: 1;
 
   opacity: 0;
   transition: opacity 500ms ease;
+}
+
+.server__image.east-usa.red {
+  top: 390px;
+  left: 198px;
 }
 
 .server__image.east-usa.active {
@@ -1552,13 +1689,18 @@ height: 100%;
 
 .server__image.west-usa {
   position: absolute;
-  top: 337px;
-  left: 470px;
+  top: 325px;
+  left: 490px;
 
   z-index: 1;
 
   opacity: 0;
   transition: opacity 500ms ease;
+}
+
+.server__image.west-usa.red {
+  top: 335px;
+  left: 480px;
 }
 
 .server__image.west-usa.active {
@@ -1613,12 +1755,17 @@ height: 100%;
 
 .server__image.singapore {
   position: absolute;
-  top: 569px;
-  left: 1234px;
+  top: 560px;
+  left: 1265px;
   z-index: 1;
 
   opacity: 0;
   transition: opacity 500ms ease;
+}
+
+.server__image.singapore.red {
+  top: 569px;
+  left: 1234px;
 }
 
 .server__image.singapore.active {
@@ -1673,11 +1820,16 @@ height: 100%;
 .server__image.germany {
   position: absolute;
   top: 317px;
-  left: 784px;
+  left: 810px;
   z-index: 1;
 
   opacity: 0;
   transition: opacity 500ms ease;
+}
+
+.server__image.germany.red {
+  top: 315px;
+  left: 780px;
 }
 
 .server__image.germany.active {
@@ -1688,7 +1840,8 @@ height: 100%;
 /* East-USA */
 
 .arrow {
-width: 1680px;
+  width: 1680px;
+  height: 1024px;
 
   position: absolute;
   top: 0;
@@ -1699,8 +1852,44 @@ width: 1680px;
   transition: opacity 500ms ease;
 }
 
-.arrow active {
+.arrow.active {
   opacity: 1;
   transition: opacity 500ms ease;
 }
 
+.arrow.animation {
+  animation: opa 2s ease infinite;
+}
+
+@keyframes opa {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  40% {
+    opacity: 0.8;
+    filter: contrast(200%);
+  }
+  50% {
+    opacity: 1;
+    filter: contrast(400%);
+  }
+  60% {
+    opacity: 0.8;
+    filter: contrast(200%);
+  }
+  70% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
