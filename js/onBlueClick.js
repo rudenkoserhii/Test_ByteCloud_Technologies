@@ -27,7 +27,7 @@ export function onBlueClick(e) {
   refs.servers.forEach((server) => {
     if (server.classList.contains(e.target.className.split(" ")[1])) {
       server.classList.add("active", "red");
-      server.setAttribute("src", "../images/files/Servers_blue_red.png");
+      server.setAttribute("src", "images/files/Servers_blue_red.png");
     }
   });
 

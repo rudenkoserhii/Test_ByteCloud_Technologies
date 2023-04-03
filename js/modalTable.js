@@ -18,9 +18,9 @@ export function modalTable(tableData) {
   const qly3 = "750p HD ready";
   const qly4 = "480p";
   const starFill =
-    '<div><img class="star2" src="../images/files/star2.png" alt="Star filled yellow" width="12px" height="12px"/></div>';
+    '<div><img class="star2" src="images/files/star2.png" alt="Star filled yellow" width="12px" height="12px"/></div>';
   const starEmpty =
-    '<div><img class="star1" src="../images/files/star1.png" alt="Star empty yellow" width="12px" height="12px"/></div>';
+    '<div><img class="star1" src="images/files/star1.png" alt="Star empty yellow" width="12px" height="12px"/></div>';
   tableData.forEach((table, index) => {
     Object.entries(table).forEach((el, i) => {
       const begin = `<p class="table__cell--head">${
